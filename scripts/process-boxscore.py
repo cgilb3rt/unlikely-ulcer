@@ -20,7 +20,7 @@ def read_score(line):
 	return line.strip().split(' ')[1]
 
 def read_batter(line, lineup_pos):
-	m = re.search('([\w\' ]+) ([a-z1-9/]+)\.+ ([0-9 ]+)', line)
+	m = re.search('([\w\'\. ]+) ([a-z1-9/]+)\.+ ([0-9 ]+)', line)
 	if m is None:
 		sys.exit(" -- UNABLE TO PARSE : %s" % line)
 	ret = {"start": (line[0] != ' '), "pos": m.group(2)}
@@ -49,10 +49,35 @@ def read_pitcher(line, order):
 
 	stats = m.group(2).split()
 	i = 0
+	#print " ++ read_pitcher: %s | %s" % (stats, line)
 	for key in ['ip','h','r','er','bb','so','ab','bf']:
 		ret[key] = stats[i]
 		i = i+1
 		
+	return ret
+
+def read_extras(line):
+	ret = {}
+	m3 = re.search(r"Win - (.*)\. +Loss - (.*)\. +Save - (.*)\.", line)
+	if m3 is not None:
+		ret['W'] = m3.group(1)
+		ret['L'] = m3.group(2)
+		ret['S'] = m3.group(3)
+	else:
+		for m in re.finditer(r"(\S+) - ([^-].*)\.", line):
+			if m is not None:
+				key = m.group(1)
+				value = m.group(2)
+				if key != 'HBP':
+					ret[key] = value
+				# special handling for HBP since it has two names
+				else:
+					m2 = re.search(r"by (.+) \((.+)\)", value)
+					if m2 is None:
+						print "WARNING: Unable to parse HBP line: ", value
+					else:
+						ret['P-HBP'] = m2.group(1)
+						ret['HBP'] = m2.group(2)
 	return ret
 
 def parse_name(name):
@@ -66,16 +91,17 @@ def read_boxscore(lines):
 	m1 = re.compile(r"<h3>Box Score<\/h3>")
 	m2 = re.compile(r"The Automated ScoreBook")
 	m3 = re.compile(r"^[^\D]+ \D+ ")
-	m4 = re.compile(r"^Name \(Pos\)")
-	m5 = re.compile(r"^Totals")
-	m6 = re.compile(r"^-+")
-	m7 = re.compile(r"^[A-Z0-9]+ - ")
-	m8 = re.compile(r"^[A-Za-z\' ]+ *IP")
-	m9 = re.compile(r"<hr></pre>")
+	m4 = re.compile(r"^Name \(Pos\)") # boxscore top
+	m5 = re.compile(r"^Totals") # boxscore bottom
+	m6 = re.compile(r"^-+") # linescore separator
+	m7 = re.compile(r"\S+ - .*\.") # extras
+	m8 = re.compile(r"^.+  +IP") # pitching header
+	m9 = re.compile(r"<hr></pre>") # end
 
 	status = None
 	ret = {'visitor-batting': [], 'visitor-pitching': [],
-		 'home-batting': [], 'home-pitching': [], 'notes': []}
+		 'home-batting': [], 'home-pitching': [],
+		 'extras': {}, 'notes': []}
 
 	v_lineup_pos = 0
 	h_lineup_pos = 0
@@ -131,11 +157,14 @@ def read_boxscore(lines):
 			ret['home-batting'].append(h_player)
 
 		elif status == "linescore" and m6.search(line) is not None:
+			#print " ++ (switch to visitor-linescore): ", line
 			status = "visitor-linescore"
 		elif status == "visitor-linescore":
+			#print " ++ (switch to home-linescore): ", line
 			ret['visitor-linescore'] = line
 			status = "home-linescore"
 		elif status == "home-linescore":
+			#print " ++ (switch to notes): ", line
 			ret['home-linescore'] = line
 			status = "notes"
 			
@@ -148,6 +177,7 @@ def read_boxscore(lines):
 			#print " ++ (switch to home-pitching): ", line
 			status = "home-pitching"
 		elif status == "home-pitching" and not line:
+			#print " ++ (switch to notes): ", line
 			status = "notes"
 		elif status == "visitor-pitching":
 			if line.strip() != '':
@@ -156,9 +186,12 @@ def read_boxscore(lines):
 		elif status == "home-pitching":
 			if line.strip() != '':
 				ret['home-pitching'].append(read_pitcher(line, h_pitcher_order))
-				h_pitcher_odrer = h_pitcher_order +1
+				h_pitcher_order = h_pitcher_order +1
 		elif status == "notes" and line and m6.search(line) is None:
-			ret['notes'].append(line)
+			if m7.search(line) is None:
+				ret['notes'].append(line)
+			else:
+				ret['extras'].update(read_extras(line))
 
 	return ret
 
@@ -171,8 +204,8 @@ def construct_game(boxscore, year):
 	home_id = ret['info']['home-id']
 	game_id = ret['info']['id']
 
-	ret['visitor-roster'] = construct_roster(year, visitor_id, game_id, boxscore['visitor-batting'], boxscore['visitor-pitching'], boxscore['notes'])
-	ret['home-roster'] = construct_roster(year, home_id, game_id, boxscore['home-batting'], boxscore['home-pitching'], boxscore['notes'])
+	ret['visitor-roster'] = construct_roster(year, visitor_id, game_id, boxscore['visitor-batting'], boxscore['visitor-pitching'], boxscore['extras'])
+	ret['home-roster'] = construct_roster(year, home_id, game_id, boxscore['home-batting'], boxscore['home-pitching'], boxscore['extras'])
 
 	return ret
 
@@ -208,7 +241,7 @@ def is_conf_game(boxscore):
 			return 1
 	return 0
 
-def construct_roster(year, team, game_id, batting, pitching, notes):
+def construct_roster(year, team, game_id, batting, pitching, extras):
 	ret = []
 	batters = {}
 	pitchers = {}
@@ -226,7 +259,36 @@ def construct_roster(year, team, game_id, batting, pitching, notes):
 			ret.append(id)
 		pitchers[id] = pitcher
 
-	#print " ++ PITCHERS %s: %s" % (team, pitchers)
+	for key in extras.keys():
+		for entry in extras[key].split(","):
+			number = 1
+			name = entry.strip()
+			m = re.match(r"(.*) ([0-9\-]+)", name)
+			if m is not None:
+				name = m.group(1)
+				number = m.group(2)
+
+			# look up name
+			player_id = None
+			if name is not 'None':
+				for id in batters.keys():
+					if batters[id]['last'] == name:
+						player_id = id
+						break
+					elif players.compute_name(batters[id]) == name:
+						player_id = id
+						break
+
+			if player_id is not None:
+				#print " ++ (%s) EXTRA: %s = %s [%s] x%s" % (team, key, name, player_id, number)
+				if key in ['E','2B','3B','HR','SB','CS','SH','HBP']:
+					batters[player_id][key.lower()] = number
+				elif key in ['WP','P-HBP','W','L','S']:
+					if key == 'P-HBP': 
+						key = "hbp"
+					else:
+						key = key[:1].lower()
+					pitchers[player_id][key] = number
 
 	for id in ret:
 		batter = None

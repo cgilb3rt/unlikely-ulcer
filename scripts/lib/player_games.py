@@ -2,7 +2,7 @@ import csv, os, re
 
 FILE = "data/players/%s/%s.csv"
 
-HEADER = "player-id,game-id,lineup-pos,start,pos,ab,r,h,rbi,bb,so,2b,3b,hr,sb,sh,hbp,po,a,e,p-ip,p-h,p-r,p-er,p-bb,p-so,p-ab,p-bf,p-wp,p-hbp,p-w,p-l,p-s".split(",")
+HEADER = "player-id,game-id,lineup-pos,start,pos,ab,r,h,rbi,bb,so,2b,3b,hr,sb,cs,sh,sf,hbp,po,a,e,pb,p-ip,p-h,p-r,p-er,p-bb,p-so,p-ab,p-bf,p-wp,p-hbp,p-w,p-l,p-s".split(",")
 
 def read_data(data, team_id, player_id):
 	data = {}
@@ -23,6 +23,9 @@ def write_data(team_id, player_id):
 		return
 	fieldnames = read_header()
 	file = get_file(team_id, player_id)
+	dir = os.path.dirname(file)
+	if not os.path.exists(dir):
+		os.makedirs(dir)
 	if os.path.exists(file):
 		os.rename(file, file + '.backup')
 	with open (file, 'w') as f:
