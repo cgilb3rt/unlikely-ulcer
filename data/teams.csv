@@ -1,0 +1,413 @@
+id,conf,name,full,extra
+adrian,,Adrian,Adrian College
+agnes-scott,,Agnes Scott,Agnes Scott College
+albertus-magnus,,Albertus Magnus,Albertus Magnus College
+albion,,Albion,Albion College
+albright,,Albright,Albright College
+alfred,,Alfred,Alfred University
+allegheny,,Allegheny,Allegheny College
+alma,,Alma,Alma College
+alvernia,,Alvernia,Alvernia University
+alverno,,Alverno,Alverno College
+amherst,,Amherst,Amherst College
+anderson-in,,Anderson (IN),Anderson University (Ind.)
+anna-maria,,Anna Maria,Anna Maria College
+arcadia,,Arcadia,Arcadia University
+augsburg,MIAC,Augsburg,Augsburg University
+augustana-il,,Augustana (IL),Augustana College (IL)
+aurora,,Aurora,Aurora University
+austin,,Austin,Austin College
+averett,,Averett,Averett University
+babson,,Babson,Babson College
+baldwin-wallace,,Baldwin Wallace,Baldwin Wallace University
+baruch,,Baruch,Baruch College
+bates,,Bates,Bates College
+bay-path,,Bay Path,Bay Path University
+becker,,Becker,Becker College
+belhaven,,Belhaven,Belhaven
+beloit,,Beloit,Beloit College
+benedictine-il,,Benedictine (IL),Benedictine University
+berry,,Berry,Berry College
+bethany-wv,,Bethany (WV),Bethany College
+bethany-lutheran,,Bethany Lutheran,Bethany Lutheran College
+bethel-mn,MIAC,Bethel (MN),Bethel University,Bethel
+birmingham-so,,Birmingham-So.,Birmingham-Southern College
+blackburn,,Blackburn,Blackburn
+bluffton,,Bluffton,Bluffton University
+bowdoin,,Bowdoin,Bowdoin College
+brandeis,,Brandeis,Brandeis University
+bridgewater-va,,Bridgewater (VA),Bridgewater College
+bridgewater-st,,Bridgewater St.,Bridgewater State University
+brockport,,Brockport,College at Brockport
+brooklyn,,Brooklyn,Brooklyn College
+buena-vista,,Buena Vista,Buena Vista University
+buffalo-st,,Buffalo St.,Buffalo State College
+cabrini,,Cabrini,Cabrini University
+cairn,,Cairn,Cairn University
+cal-lutheran,,Cal Lutheran,California Lutheran
+calvin,,Calvin,Calvin College
+capital,,Capital,Capital University
+carleton,MIAC,Carleton,Carleton College
+carroll-wi,,Carroll (WI),Carroll University
+carthage,,Carthage,Carthage College
+castleton,,Castleton,Castleton University
+catholic,,Catholic,Catholic University
+cazenovia,,Cazenovia,Cazenovia College
+cedar-crest,,Cedar Crest,Cedar Crest College
+centenary-la,,Centenary (LA),Centenary College of Louisiana
+centenary-nj,,Centenary (NJ),Centenary University (N.J.)
+central-ia,,Central (IA),Central College (Iowa)
+centre,,Centre,Centre College
+chapman,,Chapman,Chapman University
+chatham,,Chatham,Chatham University
+chicago,,Chicago,University of Chicago
+chris-newport,,Chris. Newport,Christopher Newport University
+claremont-m-s,,Claremont-M-S,Claremont-Mudd-Scripps Colleges
+clark-ma,,Clark (MA),Clark University
+baptist-bible-pa,,Clarks Summit,Clarks Summit University
+clarkson,,Clarkson,Clarkson University
+cmsv,,CMSV,
+coast-guard,,Coast Guard,U.S. Coast Guard Academy
+cobleskill-st,,Cobleskill St.,"SUNY, Cobleskill"
+coe,,Coe,Coe College
+colby,,Colby,Colby College
+concordia-tx,,Concordia (TX),Concordia University Texas
+concordia-chicago,,Concordia Chicago,Concordia University Chicago
+concordia-wi,,Concordia Wisconsin,Concordia University Wisconsin
+concordia-m'head,MIAC,Concordia-M'head,Concordia College-Moorhead,Concordia-Moorhead
+cornell-college,,Cornell College,Cornell College
+covenant,,Covenant,Covenant College
+crown-mn,,Crown (MN),Crown College
+curry,,Curry,Curry College
+case,,CWRU,Case Western Reserve University
+dyouville,,D'Youville,D'Youville College
+dallas,,Dallas,University of Dallas
+daniel-webster,,Daniel Webster,Daniel Webster College
+defiance,,Defiance,Defiance College
+delaware-valley,,Delaware Valley,Delaware Valley College
+denison,,Denison,Denison University
+depauw,,DePauw,DePauw University
+desales,,DeSales,DeSales University
+dickinson,,Dickinson,Dickinson College
+dominican-il,,Dominican (IL),Dominican University (Ill.)
+drew,,Drew,Drew University
+dubuque,,Dubuque,University of Dubuque
+east-tex-baptist,,East Tex. Baptist,East Texas Baptist University
+east-mennonite,,East. Mennonite,Eastern Mennonite University
+eastern,,Eastern,Eastern University
+eastern-conn-st,,Eastern Conn. St.,Eastern Connecticut State University
+eastern-nazarene,,Eastern Nazarene,Eastern Nazarene College
+edgewood,,Edgewood,Edgewood College
+elizabethtown,,Elizabethtown,Elizabethtown College
+elmhurst,,Elmhurst,Elmhurst College
+elmira,,Elmira,Elmira College
+elms,,Elms,Elms College
+emerson,,Emerson,Emerson College
+emmanuel-ma,,Emmanuel (MA),Emmanuel College (Mass.)
+emory,,Emory,Emory University
+emory-henry,,Emory & Henry,Emory and Henry College
+endicott,,Endicott,Endicott College
+eureka,,Eureka,Eureka College
+farmingdale-st,,Farmingdale St.,Farmingdale State College
+fdu-florham,,FDU-Florham,"Fairleigh Dickinson Univ., Florham"
+ferrum,,Ferrum,Ferrum College
+finlandia,,Finlandia,Finlandia University
+fitchburg-st,,Fitchburg St.,Fichburg State University
+fontbonne,,Fontbonne,Fontbonne University
+framingham-st,,Framingham St.,Framingham State University
+franciscan,,Franciscan,Franciscan Univ. of Steubenville
+franklin,,Franklin,Franklin College
+franklin-marshall,,Franklin & Marshall,Franklin & Marshall College
+fredonia-st,,Fredonia,SUNY at Fredonia
+frostburg-st,,Frostburg St.,Frostburg State University
+gallaudet,,Gallaudet,Gallaudet University
+geneva,,Geneva,Geneva College
+george-fox,,George Fox,George Fox University
+gettysburg,,Gettysburg,Gettysburg College
+gordon,,Gordon,Gordon College
+greensboro,,Greensboro,Greensboro College
+greenville,,Greenville,Greenville University
+grinnell,,Grinnell,Grinnell College
+grove-city,,Grove City,Grove City College
+guilford,,Guilford,Guilford College
+gust-adolphus,MIAC,Gust. Adolphus,Gustavus Adolphus College,Gustavus Adolphus
+gwynedd-mercy,,Gwynedd Mercy,Gwynedd-Mercy College
+hamilton,,Hamilton,Hamilton College
+hamline,MIAC,Hamline,Hamline University
+hanover,,Hanover,Hanover College
+hardin-simmons,,Hardin-Simmons,Hardin-Simmons University
+haverford,,Haverford,Haverford College
+heidelberg,,Heidelberg,Heidelberg University
+hendrix,,Hendrix,Hendrix College
+hilbert,,Hilbert,Hilbert College
+hiram,,Hiram,Hiram College
+hood,,Hood,Hood College
+hope,,Hope,Hope College
+houghton,,Houghton,Houghton College
+howard-payne,,Howard Payne,Howard Payne University
+hunter,,Hunter,Hunter College
+huntingdon,,Huntingdon,Huntingdon College
+husson,,Husson,Husson University
+ill-wesleyan,,Ill. Wesleyan,Illinois Wesleyan University
+illinois-col,,Illinois Col.,Illinois College
+immaculata,,Immaculata,Immaculata University
+ithaca,,Ithaca,Ithaca College
+john-carroll,,John Carroll,John Carroll University
+john-jay,,John Jay,John Jay College of Criminal Justice
+johnson-wales-ri,,Johnson & Wales (RI),Johnson and Wales University
+johnson-st,,Johnson St.,Johnson State College
+juniata,,Juniata,Juniata College
+kalamazoo,,Kalamazoo,Kalamazoo College
+kean,,Kean,Kean University
+keene-st,,Keene St.,Keene State College
+kenyon,,Kenyon,Kenyon College
+keuka,,Keuka,Keuka College
+keystone,,Keystone,Keystone College
+kings-pa,,King's (PA),King's College
+knox,,Knox,Knox College
+la-roche,,La Roche,Lar Roche College
+la-verne,,La Verne,University of La Verne
+lagrange,,LaGrange,LaGrange College
+lake-forest,,Lake Forest,Lake Forest College
+lakeland,,Lakeland,Lakeland College
+lancaster-bible,,Lancaster Bible,Lancaster Bible College
+lasell,,Lasell,Lasell College
+lawrence,,Lawrence,Lawrence University
+lebanon-valley,,Lebanon Valley,Lebanon Valley College
+lehman,,Lehman,Lehman College
+lesley-,,Lesley ,Lesley University
+letourneau,,LeTourneau,LeTourneau University
+lewis-clark,,Lewis & Clark,Lewis & Clark College
+linfield,,Linfield,Linfield College
+loras,,Loras,Loras College
+louisiana-col,,Louisiana Col.,Louisiana College
+luther,,Luther,Luther College
+lycoming,,Lycoming,Lycoming College
+lynchburg,,Lynchburg,Lynchburg College
+lyndon-st,,Lyndon St.,Lyndon State College
+macalester,MIAC,Macalester,Macalester College
+macmurray,,MacMurray,MacMurray College
+manchester,,Manchester,Manchester University
+manhattanville,,Manhattanville,Manhattanville College
+maranatha-baptist,,Maranatha Baptist,Maranatha Baptist University
+marian-wi,,Marian (WI),Marian University
+marietta,,Marietta,Marietta College
+martin-luther,,Martin Luther,Martin Luther College
+mary-baldwin,,Mary Baldwin,Mary Baldwin College
+mary-hardin-baylor,,Mary Hardin-Baylor,University of Mary Hardin-Baylor
+mary-washington,,Mary Washington,University of Mary Washington
+maryville-tn,,Maryville (TN),Maryville College
+marywood,,Marywood,Marywood University
+mass-maritime,,Mass. Maritime,Massachusetts Maritime Academy
+mcdaniel,,McDaniel,McDaniel College
+mcla,,MCLA,Massachusetts College of Liberal Arts
+me-farmington,,Me.-Farmington,"University of Maine, Farmington"
+me-presque-isle,,Me.-Presque Isle,University of Maine at Presque Isle
+medaille,,Medaille,Medaille College
+meredith,,Meredith,Meredith College
+messiah,,Messiah,Messiah College
+methodist,,Methodist,Methodist University
+middlebury,,Middlebury,Middlebury College
+millikin,,Millikin,Millikin University
+millsaps,,Millsaps,Millsaps College
+minn-morris,,Minn.-Morris,University of Minnesota-Morris,Minnesota-Morris
+misericordia,,Misericordia,Misericordia University
+mit,,MIT,MIT
+mitchell,,Mitchell,Mitchell College
+monmouth-il,,Monmouth (IL),Monmouth College
+montclair-st,,Montclair St.,Montclair State University
+moravian,,Moravian,Moravian College
+morrisville-st,,Morrisville St.,Morrisville State College
+mount-aloysius,,Mount Aloysius,Mount Aloysius College
+mount-ida,,Mount Ida,Mount Ida College
+mt-mary,,Mount Mary,Mount Mary College
+mount-union,,Mount Union,Mount Union College
+msoe,,MSOE,Milwaukee School of Engineering
+mt-st-joseph,,Mt. St. Joseph,Mount St. Joseph University
+mt-st-mary-ny,,Mt. St. Mary (NY),Mount St. Mary's University
+muhlenberg,,Muhlenberg,Muhlenberg College
+muskingum,,Muskingum,Muskingum University
+nc-wesleyan,,N.C. Wesleyan,North Carolina Wesleyan College
+nazareth,,Nazareth,Nazareth College
+neb-wesleyan,,Neb. Wesleyan,Nebraska Wesleyan University
+neumann,,Neumann,Neumann University
+new-england-col,,New England Col.,New England College
+new-jersey-city,,New Jersey City,New Jersey City University
+new-rochelle,,New Rochelle,College of New Rochelle
+newbury,,Newbury,Newbury College
+nichols,,Nichols,Nichols College
+north-central-il,,North Central (IL),North Central College
+north-central-mn,,North Central (MN),North Central University
+north-park,,North Park,North Park University
+northland,,Northland,Northland College
+northwestern-stpaul,,Northwestern-St.Paul,University of Northwestern-St. Paul,Northwestern
+norwich,,Norwich,Norwich University
+notre-dame-md,,Notre Dame (MD),Notre Dame of Maryland University
+new-york-u,,NYU,New York University
+oberlin,,Oberlin,Oberlin College
+occidental,,Occidental,Occidental College
+ohio-northern,,Ohio Northern,Ohio Northern University
+ohio-wesleyan,,Ohio Wesleyan,Ohio Wesleyan University
+old-westbury,,Old Westbury,"SUNY, Old Westbury"
+olivet,,Olivet,Olivet College
+oswego-st,,Oswego St.,"SUNY, Oswego"
+otterbein,,Otterbein,Otterbein University
+ozarks-ar,,Ozarks (AR),University of the Ozarks
+pacific-or,,Pacific (OR),Pacific University
+pacific-lutheran,,Pacific Lutheran,Pacific Lutheran University
+penn-college,,Penn College,University of Pennsylvania
+penn-st-harrisburg,,Penn St. Harrisburg,Penn State Harrisburg
+penn-st-abington,,Penn St.-Abington,Penn State Abington
+penn-st-altoona,,Penn St.-Altoona,Penn State Altoona
+penn-st-behrend,,Penn St.-Behrend,Penn State Behrend
+penn-st-berks,,Penn St.-Berks,Penn State Berks College
+piedmont,,Piedmont,Piedmont College
+pine-manor,,Pine Manor,Pine Manor College
+pitt-bradford,,Pitt.-Bradford,"University of Pittsburgh, Bradford"
+pitt-greensburg,,Pitt.-Greensburg,University of Pittsburgh-Greensburg
+plattsburgh-st,,Plattsburgh St.,Plattsburgh State University
+plymouth-st,,Plymouth St.,Plymouth State University
+pomona-pitzer,,Pomona-Pitzer,Pomona-Pitzaer Colleges
+principia,,Principia,Principia College
+puget-sound,,Puget Sound,University of Puget Sound
+purchase,,Purchase,Purchase College-SUNY
+ramapo,,Ramapo,Ramapo College
+randolph,,Randolph,Randolph College
+randolph-macon,,Randolph-Macon,Randolph-Macon College
+redlands,,Redlands,University of Redlands
+regis-ma,,Regis (MA),Regis College
+rensselaer,,Rensselaer,Rensselaer Polytechnic Institute
+rhode-island-col,,Rhode Island Col.,Rhode Island College
+rhodes,,Rhodes,Rhodes College
+ripon,,Ripon,Ripon College
+rit,,RIT,
+rivier,,Rivier,Rivier College
+roanoke,,Roanoke,Roanoke College
+rochester-ny,,Rochester (NY),University of Rochester
+rockford,,Rockford,Rockford College
+roger-williams,,Roger Williams,Roger Williams University
+rose-hulman,,Rose-Hulman,Rose-Hulman Institute of Technology
+rosemont,,Rosemont,Rosemont College
+rowan,,Rowan,Rowan University
+rutgers-camden,,Rutgers-Camden,"Rutgers University, Camden"
+rutgers-newark,,Rutgers-Newark,"Rutgers University, Newark"
+sage-colleges,,Sage Colleges,The Sage Colleges
+st-benedict,MIAC,Saint Benedict,College of Saint Benedict,St. Benedict
+saint-marys-mn,MIAC,Saint Mary's (MN),Saint Mary's University (Minn.),Saint Mary's
+saint-vincent,,Saint Vincent,Saint Vincent College
+salem,,Salem (NC),Salem College
+salem-st,,Salem St.,Salem State University
+salisbury,,Salisbury,Salisbury University
+salve-regina,,Salve Regina,Salve Regina University
+sarah-lawrence,,Sarah Lawrence,Sarah Lawrence College
+schreiner,,Schreiner,Schreiner University
+scranton,,Scranton,University of Scranton
+sewanee,,Sewanee,The University of the South
+shenandoah,,Shenandoah,Shenandoah University
+simmons,,Simmons,Simmons College
+simpson,,Simpson,Simpson College
+skidmore,,Skidmore,Skidmore College
+smith,,Smith,Smith College
+southern-me,,Southern Me.,University of Southern Maine
+southern-va,,Southern Va.,Southern Virginia University
+southern-vt,,Southern Vt.,Southern Vermonth College
+southwestern-tx,,Southwestern (TX),Southwestern University
+spalding,,Spalding,Spalding University
+springfield,,Springfield,Springfield College
+st-catherine,MIAC,St. Catherine,St. Catherine University
+st-elizabeth,,St. Elizabeth,College of Saint Elizabeth
+st-john-fisher,,St. John Fisher,St. John Fisher College
+st-joseph-ct,,St. Joseph (CT),University of Saint Joseph (Conn.)
+st-josephs-brkln,,St. Joseph's (Brkln),St. Joseph's College (Brooklyn)
+st-josephs-li,,St. Joseph's (L.I.),St. Joseph's College (Long Island)
+st-josephs-me,,St. Joseph's (ME),Saint Joseph's College (Maine)
+st-lawrence,,St. Lawrence,St. Lawrence University
+st-marys-in,,St. Mary's (IN),Saint Mary's College (IN)
+st-norbert,,St. Norbert,St. Norbert College
+st-olaf,MIAC,St. Olaf,St. Olaf College
+st-scholastica,,St. Scholastica,College of St. Scholastica
+st-thomas-mn,MIAC,St. Thomas (MN),St. Thomas University,St. Thomas
+staten-island,,Staten Island,College of Staten Island
+stevens,,Stevens,Stevens Institute of Technology
+stevenson,,Stevenson,Stevenson University
+stockton,,Stockton,Stockton University
+suffolk,,Suffolk,Suffolk University
+sul-ross-st,,Sul Ross St.,Sul Ross State University
+suny-canton,,SUNY Canton,SUNY Canton
+suny-cortland,,SUNY Cortland,"SUNY, Cortland"
+suny-geneseo,,SUNY Geneseo,"SUNY, Geneseo"
+suny-new-paltz,,SUNY New Paltz,SUNY New Paltz
+suny-oneonta,,SUNY Oneonta,SUNY Oneonta
+suny-poly,,SUNY Poly,SUNY Polytechnic Institute
+suny-potsdam,,SUNY Potsdam,"SUNY, Potsdam"
+susquehanna,,Susquehanna,Susquehanna University
+swarthmore,,Swarthmore,Swarthmore College
+sweet-briar,,Sweet Briar,Sweet Briar College
+tcnj,,TCNJ,The College of New Jersey
+texas-lutheran,,Texas Lutheran,Texas Lutheran University
+texas-dallas,,Texas-Dallas,University of Texas at Dallas
+texas-tyler,,Texas-Tyler,University of Texas at Tyler
+thiel,,Thiel,Thiel College
+thomas-me,,Thomas (ME),Thomas College
+thomas-more,,Thomas More,Thomas More College
+transylvania,,Transylvania,Transylvania University
+trine,,Trine,Trine University
+trinity-ct,,Trinity (CT),Trinity College (CT)
+trinity-tx,,Trinity (TX),Trinity University (TX)
+trinity-washington,,Trinity Washington,Trinity Washington University
+tufts,,Tufts,Tufts University
+u-new-england,,U New England,University of New England
+umass-boston,,UMass Boston,UMass Boston
+umass-dartmouth,,UMass Dartmouth,UMass Dartmouth
+union-ny,,Union (NY),Union College (N.Y.)
+ursinus,,Ursinus,Ursinus College
+utica,,Utica,Utica College
+va-wesleyan,,Va. Wesleyan,Virginia Wesleyan College
+valley-forge,,Valley Forge,University of Valley Forge
+wartburg,,Wartburg,Wartburg College
+wash-jeff,,Wash. & Jeff.,Washington and Jefferson College
+washington-col,,Washington Col.,Washington College
+washington-st-louis,,Washington-St. Louis,Washington University (Missouri)
+waynesburg,,Waynesburg,Waynesburg University
+webster,,Webster,Webster University
+wellesley,,Wellesley,Wellesley College
+wells,,Wells,Wells College
+wentworth,,Wentworth,Wentworth Institute of Technology
+wesley,,Wesley,Wesley College
+wesleyan-ct,,Wesleyan (CT),Wesleyan University
+wesleyan-ga,,Wesleyan (GA),Wesleyan College
+western-conn-st,,Western Conn. St.,Western Connecticut State University
+western-new-eng,,Western New Eng.,Western New England University
+westfield-st,,Westfield St.,Westfield State University
+westminster-mo,,Westminster (MO),Westminster College (Mo.)
+westminster-pa,,Westminster (PA),Westminster College (Pa.)
+wheaton-il,,Wheaton (IL),Wheaton College (Ill.)
+wheaton-ma,,Wheaton (MA),Wheaton College (Mass.)
+wheelock,,Wheelock,Wheelock College
+whittier,,Whittier,Whittier College
+whitworth,,Whitworth,Whitworth University
+widener,,Widener,Widener University
+wilkes,,Wilkes,Wilkes University
+willamette,,Willamette,Willamette University
+william-peace,,William Peace,William Peace University
+williams,,Williams,Williams College
+wilmington-oh,,Wilmington (OH),Wilmington College
+wilson,,Wilson,Wilson College
+wis-lutheran,,Wis. Lutheran,Wisconsin Lutheran College
+wis-eau-claire,,Wis.-Eau Claire,University of Wisconsin-Eau Claire
+wis-la-crosse,,Wis.-La Crosse,University of Wisconsin-La Crosse
+wis-oshkosh,,Wis.-Oshkosh,University of Wisconsin-Oshkosh
+wis-platteville,,Wis.-Platteville,University of Wisconsin-Platteville
+wis-river-falls,,Wis.-River Falls,University of Wisconsin-River Falls
+wis-stevens-point,,Wis.-Stevens Point,Univ. of Wisconsin-Stevens Point
+wis-stout,,Wis.-Stout,University of Wisconsin-Stout
+wis-superior,,Wis.-Superior,University of Wisconsin-Superior
+wis-whitewater,,Wis.-Whitewater,University of Wisconsin-Whitewater
+wittenberg,,Wittenberg,Wittenberg University
+wm-paterson,,Wm. Paterson,William Paterson University
+wooster,,Wooster,College of Wooster
+worcester-st,,Worcester St.,Worcester State University
+wpi,,WPI,Worcester Polytechnic Institute
+yeshiva,,Yeshiva,Yeshiva University
+york-ny,,York (NY),York College (N.Y.)
+york-pa,,York (PA),York College (Pa.)
