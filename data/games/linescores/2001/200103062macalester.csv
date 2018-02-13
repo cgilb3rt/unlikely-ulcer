@@ -1,0 +1,13 @@
+homevisitor,stat,value
+V,team-id,northwestern-stpaul
+H,team-id,macalester
+V,R,5
+V,H,5
+V,E,3
+V,innings,5
+V,inning-score,00113
+H,R,5
+H,H,8
+H,E,3
+H,innings,5
+H,inning-score,00023

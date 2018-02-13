@@ -1,0 +1,13 @@
+homevisitor,stat,value
+V,team-id,st-thomas-mn
+H,team-id,macalester
+V,R,11
+V,H,6
+V,E,2
+V,innings,5
+V,inning-score,10604
+H,R,1
+H,H,2
+H,E,3
+H,innings,5
+H,inning-score,10000

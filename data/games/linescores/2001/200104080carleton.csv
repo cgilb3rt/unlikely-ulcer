@@ -1,0 +1,13 @@
+homevisitor,stat,value
+V,team-id,macalester
+H,team-id,carleton
+V,R,0
+V,H,3
+V,E,1
+V,innings,7
+V,inning-score,0000000
+H,R,6
+H,H,8
+H,E,0
+H,innings,6
+H,inning-score,010050

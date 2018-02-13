@@ -1,0 +1,13 @@
+homevisitor,stat,value
+V,team-id,macalester
+H,team-id,st-benedict
+V,R,1
+V,H,3
+V,E,4
+V,innings,7
+V,inning-score,0001000
+H,R,8
+H,H,10
+H,E,1
+H,innings,6
+H,inning-score,210014

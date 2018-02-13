@@ -1,0 +1,13 @@
+homevisitor,stat,value
+V,team-id,macalester
+H,team-id,saint-marys-mn
+V,R,0
+V,H,0
+V,E,2
+V,innings,6
+V,inning-score,000000
+H,R,8
+H,H,12
+H,E,0
+H,innings,6
+H,inning-score,101501

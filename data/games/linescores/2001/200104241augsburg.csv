@@ -1,0 +1,13 @@
+homevisitor,stat,value
+V,team-id,macalester
+H,team-id,augsburg
+V,R,0
+V,H,2
+V,E,2
+V,innings,7
+V,inning-score,0000000
+H,R,6
+H,H,9
+H,E,1
+H,innings,6
+H,inning-score,202020

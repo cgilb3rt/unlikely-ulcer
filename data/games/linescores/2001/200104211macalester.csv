@@ -1,0 +1,13 @@
+homevisitor,stat,value
+V,team-id,hamline
+H,team-id,macalester
+V,R,11
+V,H,13
+V,E,2
+V,innings,5
+V,inning-score,13070
+H,R,2
+H,H,4
+H,E,3
+H,innings,5
+H,inning-score,10010

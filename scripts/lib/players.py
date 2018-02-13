@@ -31,7 +31,7 @@ def create_rec(first, last, year, team):
 
 def add_record(row):
 	if 'id' not in row:
-		lookup_name(row)
+		row = lookup_name(row)
 	id = row['id']
 	name = compute_name(row)
 	team = row['team']
@@ -89,8 +89,7 @@ def lookup_name(row):
 	if name in data['name-lookup'][team]:
 		id = data['name-lookup'][team][name]
 		row['id'] = id
-		#print " ++ name '%s' => id '%s'" % (id, name)
-		# for existing records, we may need to append the year
+		# this usage may ask us to extend the years list
 		rec = data['id-lookup'][id]
 		if 'years' in row and row['years'] is not None and row['years'] != rec['years']:
 			years = split_packed(rec['years'])
@@ -101,6 +100,7 @@ def lookup_name(row):
 		row['id'] = id
 		data['id-lookup'][id] = row
 		data['name-lookup'][team][name] = id
+	return data['id-lookup'][id]
 
 def split_packed(field):
 	return field.split("|")

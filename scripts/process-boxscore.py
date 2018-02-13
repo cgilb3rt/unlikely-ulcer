@@ -1,8 +1,9 @@
 import argparse, csv, datetime, os, re, sys
 from collections import OrderedDict
-from lib import games, players, player_games, sites, teams
+from lib import games, linescores, players, player_games, sites, teams
 
 updated_players = {}
+updated_games = set()
 
 def read_args():
 	parser = argparse.ArgumentParser()
@@ -114,16 +115,12 @@ def read_boxscore(lines):
 			status = "teams"
 		elif status == "teams":
 			(v, h) = read_at(line)
-			visitor = {'name': v}
-			home = {'name': h}
-			teams.lookup_name(visitor)
-			teams.lookup_name(home)
-			if 'id' not in visitor or visitor['id'] is None:
+			ret['visitor'] = teams.lookup_name({'name': v})
+			if ret['visitor'] is None or 'id' not in ret['visitor'] or ret['visitor']['id'] is None:
 				sys.exit("No team ID found for visitor team: %s" % v)
-			if 'id' not in home or home['id'] is None:
+			ret['home'] = teams.lookup_name({'name': h})
+			if ret['home'] is None or 'id' not in ret['home'] or ret['home']['id'] is None:
 				sys.exit("No team ID found for home team: %s" % h)
-			ret['visitor'] = teams.lookup_id(visitor['id'])
-			ret['home'] = teams.lookup_id(home['id'])
 			status = "date"
 		elif status == "date":
 			(date, site) = read_at(line)
@@ -207,6 +204,8 @@ def construct_game(boxscore, year):
 	ret['visitor-roster'] = construct_roster(year, visitor_id, game_id, boxscore['visitor-batting'], boxscore['visitor-pitching'], boxscore['extras'])
 	ret['home-roster'] = construct_roster(year, home_id, game_id, boxscore['home-batting'], boxscore['home-pitching'], boxscore['extras'])
 
+	ret['linescore'] = construct_linescore(game_id, boxscore)
+
 	return ret
 
 def construct_game_info(boxscore, year):
@@ -247,6 +246,7 @@ def construct_roster(year, team, game_id, batting, pitching, extras):
 	pitchers = {}
 	for batter in batting:
 		rec = players.create_rec(batter['first'], batter['last'], year, team)
+		#print " ++ batter : ", rec
 		players.add_record(rec)
 		id = rec['id']
 		ret.append(id)
@@ -303,6 +303,44 @@ def construct_roster(year, team, game_id, batting, pitching, extras):
 		updated_players[team].add(id)
 	return ret
 
+def construct_linescore(game_id, boxscore):
+	linescores.add_record(game_id, linescores.construct_rec('V', 'team-id', boxscore['visitor']['id']))
+	linescores.add_record(game_id, linescores.construct_rec('H', 'team-id', boxscore['home']['id']))
+
+	m1 = re.search(r"([0-9 \-]+) +- +([0-9]+) +([0-9]+) +([0-9]+)", boxscore['visitor-linescore'])
+	m2 = re.search(r"([0-9 \-]+) +- +([0-9]+) +([0-9]+) +([0-9]+)", boxscore['home-linescore'])
+
+	if m1 is not None:
+		linescores.add_record(game_id, linescores.construct_rec('V', 'R', m1.group(2)))
+		linescores.add_record(game_id, linescores.construct_rec('V', 'H', m1.group(3)))
+		linescores.add_record(game_id, linescores.construct_rec('V', 'E', m1.group(4)))
+
+		innings = m1.group(1).strip().replace(' ', '')
+		if innings[-1:] in ['-','X']:
+			num_innings = len(innings) -1
+		else:
+			num_innings = len(innings)
+		linescores.add_record(game_id, linescores.construct_rec('V', 'innings', num_innings))
+		linescores.add_record(game_id, linescores.construct_rec('V', 'inning-score', innings))
+	else:
+		print " WARNING : could not parse visitor linescore from ", boxscore['visitor-linescore']
+	if m2 is not None:
+		linescores.add_record(game_id, linescores.construct_rec('H', 'R', m2.group(2)))
+		linescores.add_record(game_id, linescores.construct_rec('H', 'H', m2.group(3)))
+		linescores.add_record(game_id, linescores.construct_rec('H', 'E', m2.group(4)))
+
+		innings = m2.group(1).strip().replace(' ', '')
+		if innings[-1:] in ['-','X']:
+			num_innings = len(innings) -1
+		else:
+			num_innings = len(innings)
+		linescores.add_record(game_id, linescores.construct_rec('H', 'innings', num_innings))
+		linescores.add_record(game_id, linescores.construct_rec('H', 'inning-score', innings))
+	else:
+		print " WARNING : could not parse home linescore from ", boxscore['home-linescore']
+
+	updated_games.add(game_id)
+
 def add_player(first, last, team, year):
 	rec = {'last': last, 'first': first, 'team': team, 'years': year, 'extra': None}
 	rec['id'] = players.compute_id(rec)
@@ -328,5 +366,7 @@ def main():
 		for id in updated_players[team_id]:
 			player_games.write_data(team_id, id)
 
+	for game_id in updated_games:
+		linescores.write_data(game_id)
 
 main()

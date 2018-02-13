@@ -27,7 +27,7 @@ def write_data():
 
 def add_record(row):
 	if 'id' not in row:
-		lookup_name(row)
+		row = lookup_name(row)
 	id = row['id']
 	data['id-lookup'][id] = row
 	data['name-lookup'][row['name']] = id
@@ -59,12 +59,12 @@ def lookup_id(id):
 def lookup_name(row):
 	name = row['name']
 	if name in data['name-lookup']:
-		row['id'] = data['name-lookup'][name]
-	else:
-		id = compute_id(row)
+		id = data['name-lookup'][name]
 		row['id'] = id
-		data['id-lookup'][id] = row
-		data['name-lookup'][name] = id
+	else:
+		row['id'] = compute_id(row)
+		add_record(row)
+	return data['id-lookup'][id]
 
 data = {}
 read_data(data)

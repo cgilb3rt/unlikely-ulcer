@@ -1,0 +1,13 @@
+homevisitor,stat,value
+V,team-id,macalester
+H,team-id,minn-morris
+V,R,4
+V,H,4
+V,E,1
+V,innings,7
+V,inning-score,4000000
+H,R,5
+H,H,10
+H,E,2
+H,innings,6
+H,inning-score,000221

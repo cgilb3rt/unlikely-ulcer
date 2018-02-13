@@ -1,0 +1,13 @@
+homevisitor,stat,value
+V,team-id,macalester
+H,team-id,st-catherine
+V,R,2
+V,H,4
+V,E,1
+V,innings,7
+V,inning-score,0002000
+H,R,1
+H,H,2
+H,E,4
+H,innings,7
+H,inning-score,0000001

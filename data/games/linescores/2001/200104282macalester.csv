@@ -1,0 +1,13 @@
+homevisitor,stat,value
+V,team-id,st-olaf
+H,team-id,macalester
+V,R,4
+V,H,9
+V,E,5
+V,innings,7
+V,inning-score,1000003
+H,R,5
+H,H,9
+H,E,0
+H,innings,6
+H,inning-score,300002

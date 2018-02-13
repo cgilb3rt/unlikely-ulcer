@@ -34,7 +34,8 @@ def lookup_id(id):
 def lookup_name(row):
 	name = row['name']
 	if name in data['name-lookup']:
-		row['id'] = data['name-lookup'][name]
+		id = data['name-lookup'][name]
+		return data['id-lookup'][id]
 	return None
 
 data = {}

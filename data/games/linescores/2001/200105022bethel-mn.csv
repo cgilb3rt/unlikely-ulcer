@@ -1,0 +1,13 @@
+homevisitor,stat,value
+V,team-id,macalester
+H,team-id,bethel-mn
+V,R,3
+V,H,11
+V,E,1
+V,innings,8
+V,inning-score,00010002
+H,R,4
+H,H,8
+H,E,1
+H,innings,8
+H,inning-score,10000003

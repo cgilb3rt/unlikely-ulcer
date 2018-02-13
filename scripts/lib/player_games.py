@@ -4,19 +4,21 @@ FILE = "data/players/%s/%s.csv"
 
 HEADER = "player-id,game-id,lineup-pos,start,pos,ab,r,h,rbi,bb,so,2b,3b,hr,sb,cs,sh,sf,hbp,po,a,e,pb,p-ip,p-h,p-r,p-er,p-bb,p-so,p-ab,p-bf,p-wp,p-hbp,p-w,p-l,p-s".split(",")
 
-def read_data(data, team_id, player_id):
-	data = {}
-	if os.path.exists(file):
-		with open (get_file(team_id, player_id), 'r') as f:
-			reader = csv.DictReader(f)
-			for row in reader:
-				add_record(team_id, row)
+def get_file(team_id, player_id):
+	return FILE % (team_id, player_id)
 
 def read_header():
 	return HEADER
 
-def get_file(team_id, player_id):
-	return FILE % (team_id, player_id)
+def read_data(data, team_id, player_id):
+	data = {}
+	file = get_file(team_id, player_id)
+	if os.path.exists(file):
+		with open (file, 'r') as f:
+			reader = csv.DictReader(f)
+			for row in reader:
+				add_record(team_id, row)
+
 
 def write_data(team_id, player_id):
 	if team_id not in data or player_id not in data[team_id]:
