@@ -6,15 +6,17 @@ FILE = "data/games.csv"
 
 HEADER = "id,visitor-id,home-id,site-id,date,number,timeofgame,neutral,indoors,postponed-till,makeup-from,conf".split(",")
 
-def read_data(data):
+data = {}
+
+def read_header():
+	return HEADER
+
+def read_data():
 	data['id-lookup'] = {}
 	with open (FILE, 'r') as f:
 		reader = csv.DictReader(f)
 		for row in reader:
 			add_record(row)
-
-def read_header():
-	return HEADER
 
 def write_data():
 	fieldnames = read_header()
@@ -28,7 +30,6 @@ def write_data():
 def add_record(row):
 	if 'id' not in row:
 		row['id'] = compute_id(row)
-		write = 1
 	id = row['id']
 	data['id-lookup'][id] = row
 
@@ -41,11 +42,10 @@ def compute_id(row):
 
 def lookup_id(id):
 	if id in data['id-lookup']:
-		return data['id-lookup']
+		return data['id-lookup'][id]
 	return None
 
 def get_data():
 	return data;
 
-data = {}
-read_data(data)
+read_data()

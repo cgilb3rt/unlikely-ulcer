@@ -4,10 +4,8 @@ H,team-id,st-catherine
 V,R,2
 V,H,8
 V,E,2
-V,innings,7
-V,inning-score,0000101
+V,innings,"[""0"", ""0"", ""0"", ""0"", ""1"", ""0"", ""1""]"
 H,R,6
 H,H,7
 H,E,1
-H,innings,6
-H,inning-score,102003
+H,innings,"[""1"", ""0"", ""2"", ""0"", ""0"", ""3""]"

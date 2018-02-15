@@ -62,7 +62,8 @@ def lookup_name(row):
 		id = data['name-lookup'][name]
 		row['id'] = id
 	else:
-		row['id'] = compute_id(row)
+		id = compute_id(row)
+		row['id'] = id
 		add_record(row)
 	return data['id-lookup'][id]
 

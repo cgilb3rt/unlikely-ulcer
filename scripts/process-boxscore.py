@@ -304,41 +304,31 @@ def construct_roster(year, team, game_id, batting, pitching, extras):
 	return ret
 
 def construct_linescore(game_id, boxscore):
-	linescores.add_record(game_id, linescores.construct_rec('V', 'team-id', boxscore['visitor']['id']))
-	linescores.add_record(game_id, linescores.construct_rec('H', 'team-id', boxscore['home']['id']))
+	ls = []
+	ls.append(linescores.construct_rec('V', 'team-id', boxscore['visitor']['id']))
+	ls.append(linescores.construct_rec('H', 'team-id', boxscore['home']['id']))
 
-	m1 = re.search(r"([0-9 \-]+) +- +([0-9]+) +([0-9]+) +([0-9]+)", boxscore['visitor-linescore'])
-	m2 = re.search(r"([0-9 \-]+) +- +([0-9]+) +([0-9]+) +([0-9]+)", boxscore['home-linescore'])
+	m1 = re.search(r"([0-9 \-\(\)]+) +- +([0-9]+) +([0-9]+) +([0-9]+)", boxscore['visitor-linescore'])
+	m2 = re.search(r"([0-9 \-\(\)]+) +- +([0-9]+) +([0-9]+) +([0-9]+)", boxscore['home-linescore'])
 
 	if m1 is not None:
-		linescores.add_record(game_id, linescores.construct_rec('V', 'R', m1.group(2)))
-		linescores.add_record(game_id, linescores.construct_rec('V', 'H', m1.group(3)))
-		linescores.add_record(game_id, linescores.construct_rec('V', 'E', m1.group(4)))
+		ls.append(linescores.construct_rec('V', 'R', m1.group(2)))
+		ls.append(linescores.construct_rec('V', 'H', m1.group(3)))
+		ls.append(linescores.construct_rec('V', 'E', m1.group(4)))
 
-		innings = m1.group(1).strip().replace(' ', '')
-		if innings[-1:] in ['-','X']:
-			num_innings = len(innings) -1
-		else:
-			num_innings = len(innings)
-		linescores.add_record(game_id, linescores.construct_rec('V', 'innings', num_innings))
-		linescores.add_record(game_id, linescores.construct_rec('V', 'inning-score', innings))
+		ls.append(linescores.construct_rec('V', 'innings', linescores.parse_innings(m1.group(1))))
 	else:
 		print " WARNING : could not parse visitor linescore from ", boxscore['visitor-linescore']
 	if m2 is not None:
-		linescores.add_record(game_id, linescores.construct_rec('H', 'R', m2.group(2)))
-		linescores.add_record(game_id, linescores.construct_rec('H', 'H', m2.group(3)))
-		linescores.add_record(game_id, linescores.construct_rec('H', 'E', m2.group(4)))
+		ls.append(linescores.construct_rec('H', 'R', m2.group(2)))
+		ls.append(linescores.construct_rec('H', 'H', m2.group(3)))
+		ls.append(linescores.construct_rec('H', 'E', m2.group(4)))
 
-		innings = m2.group(1).strip().replace(' ', '')
-		if innings[-1:] in ['-','X']:
-			num_innings = len(innings) -1
-		else:
-			num_innings = len(innings)
-		linescores.add_record(game_id, linescores.construct_rec('H', 'innings', num_innings))
-		linescores.add_record(game_id, linescores.construct_rec('H', 'inning-score', innings))
+		ls.append(linescores.construct_rec('H', 'innings', linescores.parse_innings(m2.group(1))))
 	else:
 		print " WARNING : could not parse home linescore from ", boxscore['home-linescore']
 
+	linescores.add_records(game_id, ls)
 	updated_games.add(game_id)
 
 def add_player(first, last, team, year):

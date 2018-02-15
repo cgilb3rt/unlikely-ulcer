@@ -4,10 +4,8 @@ H,team-id,bethel-mn
 V,R,3
 V,H,11
 V,E,1
-V,innings,8
-V,inning-score,00010002
+V,innings,"[""0"", ""0"", ""0"", ""1"", ""0"", ""0"", ""0"", ""2""]"
 H,R,4
 H,H,8
 H,E,1
-H,innings,8
-H,inning-score,10000003
+H,innings,"[""1"", ""0"", ""0"", ""0"", ""0"", ""0"", ""0"", ""3""]"

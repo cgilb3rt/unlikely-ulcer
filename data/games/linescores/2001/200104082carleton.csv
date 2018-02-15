@@ -4,10 +4,8 @@ H,team-id,carleton
 V,R,1
 V,H,3
 V,E,5
-V,innings,5
-V,inning-score,00100
+V,innings,"[""0"", ""0"", ""1"", ""0"", ""0""]"
 H,R,9
 H,H,6
 H,E,1
-H,innings,4
-H,inning-score,0018
+H,innings,"[""0"", ""0"", ""1"", ""8""]"

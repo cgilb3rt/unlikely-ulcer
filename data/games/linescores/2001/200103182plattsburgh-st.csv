@@ -1,0 +1,11 @@
+homevisitor,stat,value
+V,team-id,macalester
+H,team-id,plattsburgh-st
+V,R,0
+V,H,2
+V,E,3
+H,R,12
+H,H,12
+H,E,0
+V,innings,"[""0"", ""0"", ""0"", ""0"", ""0""]"
+H,innings,"[""3"", ""6"", ""1"", ""2""]"

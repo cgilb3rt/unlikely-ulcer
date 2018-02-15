@@ -1,0 +1,11 @@
+homevisitor,stat,value
+V,team-id,cal-baptist
+H,team-id,macalester
+V,R,18
+V,H,18
+V,E,5
+H,R,12
+H,H,13
+H,E,3
+V,innings,"[""1"", ""4"", ""8"", ""0"", ""0"", ""3"", ""2""]"
+H,innings,"[""4"", ""0"", ""6"", ""2"", ""0"", ""0"", ""0""]"

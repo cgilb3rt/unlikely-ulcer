@@ -4,10 +4,8 @@ H,team-id,augsburg
 V,R,1
 V,H,6
 V,E,0
-V,innings,7
-V,inning-score,0000001
+V,innings,"[""0"", ""0"", ""0"", ""0"", ""0"", ""0"", ""1""]"
 H,R,5
 H,H,5
 H,E,0
-H,innings,6
-H,inning-score,201002
+H,innings,"[""2"", ""0"", ""1"", ""0"", ""0"", ""2""]"

@@ -4,10 +4,8 @@ H,team-id,macalester
 V,R,4
 V,H,9
 V,E,5
-V,innings,7
-V,inning-score,1000003
+V,innings,"[""1"", ""0"", ""0"", ""0"", ""0"", ""0"", ""3""]"
 H,R,5
 H,H,9
 H,E,0
-H,innings,6
-H,inning-score,300002
+H,innings,"[""3"", ""0"", ""0"", ""0"", ""0"", ""2""]"

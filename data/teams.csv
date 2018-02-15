@@ -44,6 +44,7 @@ buena-vista,,Buena Vista,Buena Vista University
 buffalo-st,,Buffalo St.,Buffalo State College
 cabrini,,Cabrini,Cabrini University
 cairn,,Cairn,Cairn University
+cal-baptist,,Cal Baptist,Cal Baptist University,Cal Baptist Univ
 cal-lutheran,,Cal Lutheran,California Lutheran
 calvin,,Calvin,Calvin College
 capital,,Capital,Capital University
@@ -71,6 +72,8 @@ coast-guard,,Coast Guard,U.S. Coast Guard Academy
 cobleskill-st,,Cobleskill St.,"SUNY, Cobleskill"
 coe,,Coe,Coe College
 colby,,Colby,Colby College
+colorado,,Colorado,Colorado College,Colorado College
+concorida-ca,,Concordia (CA),Concordia University Irvine,Concordia Univ. (CA)
 concordia-tx,,Concordia (TX),Concordia University Texas
 concordia-chicago,,Concordia Chicago,Concordia University Chicago
 concordia-wi,,Concordia Wisconsin,Concordia University Wisconsin
@@ -166,7 +169,7 @@ keystone,,Keystone,Keystone College
 kings-pa,,King's (PA),King's College
 knox,,Knox,Knox College
 la-roche,,La Roche,Lar Roche College
-la-verne,,La Verne,University of La Verne
+la-verne,,La Verne,University of La Verne,Univ. of La Verne
 lagrange,,LaGrange,LaGrange College
 lake-forest,,Lake Forest,Lake Forest College
 lakeland,,Lakeland,Lakeland College
@@ -185,7 +188,7 @@ luther,,Luther,Luther College
 lycoming,,Lycoming,Lycoming College
 lynchburg,,Lynchburg,Lynchburg College
 lyndon-st,,Lyndon St.,Lyndon State College
-macalester,MIAC,Macalester,Macalester College
+macalester,MIAC,Macalester,Macalester College,Macalester College
 macmurray,,MacMurray,MacMurray College
 manchester,,Manchester,Manchester University
 manhattanville,,Manhattanville,Manhattanville College
@@ -265,7 +268,7 @@ piedmont,,Piedmont,Piedmont College
 pine-manor,,Pine Manor,Pine Manor College
 pitt-bradford,,Pitt.-Bradford,"University of Pittsburgh, Bradford"
 pitt-greensburg,,Pitt.-Greensburg,University of Pittsburgh-Greensburg
-plattsburgh-st,,Plattsburgh St.,Plattsburgh State University
+plattsburgh-st,,Plattsburgh St.,Plattsburgh State University,Plattsburgh State
 plymouth-st,,Plymouth St.,Plymouth State University
 pomona-pitzer,,Pomona-Pitzer,Pomona-Pitzaer Colleges
 principia,,Principia,Principia College
@@ -302,6 +305,7 @@ salve-regina,,Salve Regina,Salve Regina University
 sarah-lawrence,,Sarah Lawrence,Sarah Lawrence College
 schreiner,,Schreiner,Schreiner University
 scranton,,Scranton,University of Scranton
+seattle,,Seattle,Seattle University,Seattle University
 sewanee,,Sewanee,The University of the South
 shenandoah,,Shenandoah,Shenandoah University
 simmons,,Simmons,Simmons College
@@ -390,7 +394,7 @@ widener,,Widener,Widener University
 wilkes,,Wilkes,Wilkes University
 willamette,,Willamette,Willamette University
 william-peace,,William Peace,William Peace University
-williams,,Williams,Williams College
+williams,,Williams,Williams College,Williams College
 wilmington-oh,,Wilmington (OH),Wilmington College
 wilson,,Wilson,Wilson College
 wis-lutheran,,Wis. Lutheran,Wisconsin Lutheran College
