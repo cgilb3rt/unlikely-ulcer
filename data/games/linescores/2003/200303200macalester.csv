@@ -1,0 +1,11 @@
+homevisitor,stat,value
+V,team-id,albertus-magnus
+H,team-id,macalester
+V,R,10
+V,H,15
+V,E,1
+V,innings,"[""2"", ""0"", ""3"", ""0"", ""0"", ""3"", ""2""]"
+H,R,2
+H,H,8
+H,E,7
+H,innings,"[""2"", ""0"", ""0"", ""0"", ""0"", ""0"", ""0""]"

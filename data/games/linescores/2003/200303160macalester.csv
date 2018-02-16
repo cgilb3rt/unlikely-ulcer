@@ -1,0 +1,11 @@
+homevisitor,stat,value
+V,team-id,minn-st-moorhead
+H,team-id,macalester
+V,R,9
+V,H,8
+V,E,0
+V,innings,"[""0"", ""0"", ""4"", ""5"", ""0""]"
+H,R,0
+H,H,5
+H,E,1
+H,innings,"[""0"", ""0"", ""0"", ""0"", ""0""]"

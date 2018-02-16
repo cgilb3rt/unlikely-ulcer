@@ -1,0 +1,11 @@
+homevisitor,stat,value
+V,team-id,saint-marys-mn
+H,team-id,macalester
+V,R,13
+V,H,15
+V,E,0
+V,innings,"[""0"", ""1"", ""0"", ""6"", ""6""]"
+H,R,0
+H,H,1
+H,E,3
+H,innings,"[""0"", ""0"", ""0"", ""0"", ""0""]"

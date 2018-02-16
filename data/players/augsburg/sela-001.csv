@@ -1,3 +1,3 @@
-player-id,game-id,lineup-pos,start,pos,ab,r,h,rbi,bb,so,2b,3b,hr,sb,cs,sh,sf,hbp,po,a,e,pb,p-ip,p-h,p-r,p-er,p-bb,p-so,p-ab,p-bf,p-wp,p-hbp,p-w,p-l,p-s
-sela-001,200104241augsburg,2,True,cf,4,1,1,0,0,1,,,,1,,,,,1,0,,,,,,,,,,,,,,,
-sela-001,200104242augsburg,2,True,cf,2,0,1,1,1,0,,,,,,,,,1,0,,,,,,,,,,,,,,,
+player-id,game-id,lineup-pos,start,pos,ab,r,h,rbi,bb,so,2b,3b,hr,sb,cs,sh,sf,hbp,po,a,e,pb,p-ip,p-h,p-r,p-er,p-bb,p-so,p-ab,p-bf,p-wp,p-hbp,p-bk,p-w,p-l,p-s
+sela-001,200104241augsburg,2,True,cf,4,1,1,0,0,1,,,,1,,,,,1,0,,,,,,,,,,,,,,,,
+sela-001,200104242augsburg,2,True,cf,2,0,1,1,1,0,,,,,1,,,,1,0,,,,,,,,,,,,,,,,
