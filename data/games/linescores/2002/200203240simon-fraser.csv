@@ -1,0 +1,11 @@
+homevisitor,stat,value
+V,team-id,macalester
+H,team-id,simon-fraser
+V,R,0
+V,H,0
+V,E,5
+V,innings,"[""0"", ""0"", ""0"", ""0"", ""0""]"
+H,R,9
+H,H,8
+H,E,0
+H,innings,"[""0"", ""0"", ""5"", ""0"", ""4""]"

@@ -1,3 +1,3 @@
 player-id,game-id,lineup-pos,start,pos,ab,r,h,rbi,bb,so,2b,3b,hr,sb,cs,sh,sf,hbp,po,a,e,pb,p-ip,p-h,p-r,p-er,p-bb,p-so,p-ab,p-bf,p-wp,p-hbp,p-w,p-l,p-s
-ferna001,200104171st-catherine,4,True,p,3,0,0,0,0,0,,,,,,,,,0,2,,,7.0,4,2,0,3,9,26,30,,,,1,
-ferna001,200104172st-catherine,4,True,1b/p,2,0,1,2,1,0,,,,,,,,,7,2,,,1.0,0,0,0,0,2,2,2,,,,,
+ferna001,200205031macalester,6,True,p,3,2,1,1,0,0,,,,,,,,,2,2,,,7.0,4,0,0,1,7,25,27,,,14-14,,
+ferna001,200205032macalester,6,True,p/1b,4,0,2,1,0,0,1,,,,,,,,3,1,,,5.1,6,1,1,0,5,22,22,,,15-15,,

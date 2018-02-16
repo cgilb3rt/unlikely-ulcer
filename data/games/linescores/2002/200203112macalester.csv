@@ -1,0 +1,11 @@
+homevisitor,stat,value
+V,team-id,wis-river-falls
+H,team-id,macalester
+V,R,3
+V,H,9
+V,E,2
+V,innings,"[""0"", ""1"", ""0"", ""1"", ""0"", ""1""]"
+H,R,1
+H,H,6
+H,E,2
+H,innings,"[""0"", ""0"", ""1"", ""0"", ""0"", ""0""]"

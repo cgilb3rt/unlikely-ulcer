@@ -45,6 +45,9 @@ def lookup_id(id):
 		return data['id-lookup'][id]
 	return None
 
+def has_id(id):
+	return id in data['id-lookup']
+
 def get_data():
 	return data;
 
