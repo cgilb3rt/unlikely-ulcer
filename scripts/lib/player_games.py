@@ -2,7 +2,7 @@ import csv, os, re
 
 FILE = "data/players/%s/%s.csv"
 
-HEADER = "player-id,game-id,lineup-pos,start,pos,ab,r,h,rbi,bb,so,2b,3b,hr,sb,cs,sh,sf,hbp,po,a,e,pb,p-ip,p-h,p-r,p-er,p-bb,p-so,p-ab,p-bf,p-wp,p-hbp,p-w,p-l,p-s".split(",")
+HEADER = "player-id,game-id,lineup-pos,start,pos,ab,r,h,rbi,bb,so,2b,3b,hr,sb,cs,sh,sf,hbp,po,a,e,pb,p-ip,p-h,p-r,p-er,p-bb,p-so,p-ab,p-bf,p-wp,p-hbp,p-bk,p-w,p-l,p-s".split(",")
 
 def get_file(team_id, player_id):
 	return FILE % (team_id, player_id)

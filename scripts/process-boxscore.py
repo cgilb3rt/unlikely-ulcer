@@ -76,7 +76,7 @@ def read_extras(line):
 		ret['L'] = m3.group(2)
 		ret['S'] = m3.group(3)
 	else:
-		for m in re.finditer(r"(\S+) - ([^-].*)\.", line):
+		for m in re.finditer(r"(\S+) - ([^-]*)\.", line):
 			if m is not None:
 				key = m.group(1)
 				value = m.group(2)
@@ -90,6 +90,7 @@ def read_extras(line):
 					else:
 						ret['P-HBP'] = m2.group(1)
 						ret['HBP'] = m2.group(2)
+	#print " ** READ_EXTRAS - %s => %s" % (line, ret)
 	return ret
 
 def parse_name(name):
@@ -302,13 +303,13 @@ def construct_roster(year, team, game_id, batting, pitching, extras):
 
 			if player_id is not None:
 				#print " ++ (%s) EXTRA: %s = %s [%s] x%s" % (team, key, name, player_id, number)
-				if key in ['E','2B','3B','HR','SB','CS','SH','HBP']:
+				if key in ['E','PB','2B','3B','HR','SB','CS','SH','HBP']:
 					batters[player_id][key.lower()] = number
-				elif key in ['WP','P-HBP','W','L','S']:
+				elif key in ['WP','P-HBP','BK','W','L','S']:
 					if key == 'P-HBP': 
 						key = "hbp"
 					else:
-						key = key[:1].lower()
+						key = key.lower()
 					pitchers[player_id][key] = number
 
 	for id in ret:
