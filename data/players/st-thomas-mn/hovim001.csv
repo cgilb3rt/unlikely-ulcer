@@ -1,2 +1,3 @@
 player-id,game-id,lineup-pos,start,pos,ab,r,h,rbi,bb,so,2b,3b,hr,sb,cs,sh,sf,hbp,po,a,e,pb,p-ip,p-h,p-r,p-er,p-bb,p-so,p-ab,p-bf,p-wp,p-hbp,p-bk,p-w,p-l,p-s
-hovim001,200204232macalester,5,False,1b,1,0,1,1,0,0,,,,,,,,,3,0,,,,,,,,,,,,,,,,
+hovim001,200404231macalester,5,False,1b,2,1,2,0,0,0,1,,,,,,,,4,0,,,,,,,,,,,,,,,,
+hovim001,200404232macalester,5,False,ss,0,0,0,0,0,0,,,,,,,,,0,0,,,,,,,,,,,,,,,,

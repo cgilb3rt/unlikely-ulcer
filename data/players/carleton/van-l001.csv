@@ -1,0 +1,3 @@
+player-id,game-id,lineup-pos,start,pos,ab,r,h,rbi,bb,so,2b,3b,hr,sb,cs,sh,sf,hbp,po,a,e,pb,p-ip,p-h,p-r,p-er,p-bb,p-so,p-ab,p-bf,p-wp,p-hbp,p-bk,p-w,p-l,p-s
+van-l001,200404151macalester,9,False,p,0,0,0,0,0,0,,,,,,,,,0,0,,,1.0,0,0,0,0,0,3,3,,,,,,
+van-l001,200404152macalester,7,True,dh,2,0,0,0,0,0,,,,,,,,,0,0,,,,,,,,,,,,,,,,

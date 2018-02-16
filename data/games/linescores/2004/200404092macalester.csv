@@ -1,0 +1,11 @@
+homevisitor,stat,value
+V,team-id,minn-morris
+H,team-id,macalester
+V,R,11
+V,H,17
+V,E,1
+V,innings,"[""0"", ""0"", ""4"", ""3"", ""4""]"
+H,R,1
+H,H,2
+H,E,2
+H,innings,"[""1"", ""0"", ""0"", ""0"", ""0""]"

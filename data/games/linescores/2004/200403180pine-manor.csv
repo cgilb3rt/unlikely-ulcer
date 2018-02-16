@@ -1,0 +1,11 @@
+homevisitor,stat,value
+V,team-id,macalester
+H,team-id,pine-manor
+V,R,5
+V,H,6
+V,E,4
+V,innings,"[""0"", ""3"", ""0"", ""0"", ""2"", ""0"", ""0""]"
+H,R,7
+H,H,3
+H,E,3
+H,innings,"[""0"", ""3"", ""2"", ""0"", ""2"", ""0""]"

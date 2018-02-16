@@ -1,0 +1,11 @@
+homevisitor,stat,value
+V,team-id,st-thomas-mn
+H,team-id,macalester
+V,R,15
+V,H,19
+V,E,2
+V,innings,"[""3"", ""0"", ""0"", ""5"", ""2"", ""0"", ""5""]"
+H,R,3
+H,H,3
+H,E,4
+H,innings,"[""0"", ""0"", ""0"", ""1"", ""2"", ""0"", ""0""]"
