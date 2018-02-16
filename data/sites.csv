@@ -2,7 +2,10 @@ id,name,extra
 NORTH002,"Northfield, Minn. (St. Olaf College)",
 NORTH001,"Northfield, MN (Bell Field Stadium)",
 ARDEN001,"Arden Hills, Minn. (Bethel College)","Arden Hills, Minn."
+STPET001,"St. Peter, MN",
+MOORH002,"Moorhead, Minn. (Jake Christiansen)",
 MOORH001,"Moorhead, MN (Jake Christiansen)",
+ORLAN001,"Orlando, Fla.",
 MINNE001,"Minneapolis, Minn. (Anderson-Nelson)",
 ORANG001,"Orange, CA",
 STJOS001,"St. Joseph, Minn. (St. Benedict)","St. Joseph, Minn.|St. Joseph (St. Bens)"
@@ -13,4 +16,6 @@ WINON001,Winona Minn. (SMU Field),"Winona, Minn. (SMU Field)"
 STPAU003,St. Paul -- UST (South Field),
 STPAU002,"St. Paul, Minn. (St. Catherine)",
 STPAU001,"St. Paul, Minn. (Shaw Field)","St. Paul, Minn."
+STPAU006,"St. Paul, Minn. (Helen Meredith Field)",
+STPAU005,"St. Paul, Minn. (Helen Merideth)",
 STPAU004,"St. Paul, Minn. (South Field)",

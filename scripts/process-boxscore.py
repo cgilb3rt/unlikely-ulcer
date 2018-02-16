@@ -27,11 +27,11 @@ def read_batter(line, lineup_pos):
 	left = re.sub("\.+ ?$", "", line[:27])
 	right = line[27:]
 
-	m = re.search("^([\w\'\.\*\- ]+) ([a-z1-9/]+)$", left)
+	m = re.search("^([\w\.\*\-', ]+) ([a-z1-9/]+)$", left)
 	if m is None:
 		ret['pos'] = None
 		# try again without the POS
-		m = re.search("^([\w\'\.\* ]+)\.*$", left)
+		m = re.search("^([\w\.\*\-', ]+)\.*$", left)
 		if m is None:
 			sys.exit(" -- UNABLE TO PARSE : %s" % line)
 	else:
@@ -102,6 +102,9 @@ def read_extras(line):
 def parse_name(name):
 	if ' ' in name:
 		parts = name.split(' ')
+		# Reverse "Last, First"
+		if parts[0][-1:] == ',':
+			return (parts[1], parts[0][:-1])
 		return (parts[0], parts[1])
 	else:
 		# try to identify first initial 'R.Zahn'
@@ -140,10 +143,10 @@ def read_boxscore(lines):
 			(v, h) = read_at(line)
 			ret['visitor'] = teams.lookup_name({'name': v})
 			if ret['visitor'] is None or 'id' not in ret['visitor'] or ret['visitor']['id'] is None:
-				sys.exit("No team ID found for visitor team: %s" % v)
+				sys.exit("No team ID found for visitor team: '%s'" % v)
 			ret['home'] = teams.lookup_name({'name': h})
 			if ret['home'] is None or 'id' not in ret['home'] or ret['home']['id'] is None:
-				sys.exit("No team ID found for home team: %s" % h)
+				sys.exit("No team ID found for home team: '%s'" % h)
 			status = "date"
 		elif status == "date":
 			(date, site) = read_at(line)

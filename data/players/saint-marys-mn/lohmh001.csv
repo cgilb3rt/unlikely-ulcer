@@ -1,3 +1,3 @@
 player-id,game-id,lineup-pos,start,pos,ab,r,h,rbi,bb,so,2b,3b,hr,sb,cs,sh,sf,hbp,po,a,e,pb,p-ip,p-h,p-r,p-er,p-bb,p-so,p-ab,p-bf,p-wp,p-hbp,p-bk,p-w,p-l,p-s
-lohmh001,200304301macalester,10,True,lf,0,0,0,0,0,0,,,,,,,,,1,0,,,,,,,,,,,,,,,,
-lohmh001,200304302macalester,10,True,dh/p,0,0,0,0,0,0,,,,,,,,,0,0,,,2.2,0,0,0,1,2,7,8,,,,7-6,,
+lohmh001,200404251macalester,2,True,lf,3,1,2,0,0,0,,,,,,1,,,0,0,,,,,,,,,,,,,,,,
+lohmh001,200404252macalester,2,True,p/lf,4,0,1,1,0,1,,,,,1,,,,0,0,,,3.1,6,3,2,0,2,13,16,,,,,8-7,
