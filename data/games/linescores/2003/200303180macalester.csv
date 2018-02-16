@@ -1,0 +1,11 @@
+homevisitor,stat,value
+V,team-id,colorado
+H,team-id,macalester
+V,R,18
+V,H,17
+V,E,3
+V,innings,"[""1"", ""13"", ""1"", ""1"", ""2""]"
+H,R,4
+H,H,6
+H,E,6
+H,innings,"[""0"", ""0"", ""3"", ""1"", ""0""]"

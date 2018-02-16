@@ -77,7 +77,7 @@ concorida-ca,,Concordia (CA),Concordia University Irvine,Concordia Univ. (CA)
 concordia-tx,,Concordia (TX),Concordia University Texas
 concordia-chicago,,Concordia Chicago,Concordia University Chicago
 concordia-wi,,Concordia Wisconsin,Concordia University Wisconsin
-concordia-m'head,MIAC,Concordia-Moorhead,Concordia College-Moorhead,"Concordia-M'head|Concordia"
+concordia-m'head,MIAC,Concordia-Moorhead,Concordia College-Moorhead,"Concordia-M'head|Concordia|Concordia College"
 cornell-college,,Cornell College,Cornell College,Cornell (Ia.)
 covenant,,Covenant,Covenant College
 crown-mn,,Crown (MN),Crown College
@@ -243,7 +243,7 @@ north-central-il,,North Central (IL),North Central College
 north-central-mn,,North Central (MN),North Central University
 north-park,,North Park,North Park University
 northland,,Northland,Northland College
-northwestern-stpaul,,Northwestern-St.Paul,University of Northwestern-St. Paul,Northwestern|Northwestern (Minn.)
+northwestern-stpaul,,Northwestern-St.Paul,University of Northwestern-St. Paul,Northwestern|Northwestern (Minn.)|Northwestern College
 norwich,,Norwich,Norwich University
 notre-dame-md,,Notre Dame (MD),Notre Dame of Maryland University
 new-york-u,,NYU,New York University
@@ -417,3 +417,6 @@ york-ny,,York (NY),York College (N.Y.)
 york-pa,,York (PA),York College (Pa.)
 simon-fraser,,Simon Fraser,Simon Fraser
 dana,,Dana,Dana
+minn-st-moorhead,,MSU-Moorhead,Minnesota State Univ.-Moorhead
+okla-panhandle,,Okla. Panhandle St.,Oklahoma Panhandle State Univ.
+viterbo,,Viterbo,Viterbo University

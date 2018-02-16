@@ -1,0 +1,11 @@
+homevisitor,stat,value
+V,team-id,martin-luther
+H,team-id,macalester
+V,R,8
+V,H,9
+V,E,3
+V,innings,"[""2"", ""1"", ""0"", ""0"", ""1"", ""4""]"
+H,R,9
+H,H,13
+H,E,1
+H,innings,"[""3"", ""2"", ""0"", ""0"", ""4"", ""0""]"

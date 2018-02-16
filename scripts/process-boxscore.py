@@ -22,23 +22,29 @@ def read_score(line):
 	return line.strip().split(' ')[1]
 
 def read_batter(line, lineup_pos):
-	m = re.search('([\w\'\.\* ]+) ([a-z1-9/]+)\.+ ([0-9 ]+)', line)
+	ret = {"start": (line[0] != ' ')}
+
+	left = re.sub("\.+ ?$", "", line[:27])
+	right = line[27:]
+
+	m = re.search("^([\w\'\.\*\- ]+) ([a-z1-9/]+)$", left)
 	if m is None:
-		# handle the case where there is no '.' after positions
-		m = re.search('([\w\'\.\* ]+) ([a-z1-9/]+) ([0-9 ]+)', line)
+		ret['pos'] = None
+		# try again without the POS
+		m = re.search("^([\w\'\.\* ]+)\.*$", left)
 		if m is None:
 			sys.exit(" -- UNABLE TO PARSE : %s" % line)
-	ret = {"start": (line[0] != ' '), "pos": m.group(2)}
+	else:
+		ret['pos'] = m.group(2)
+	(ret['first'], ret['last']) = parse_name(m.group(1).strip())
 
 	if ret['start']:
 		lineup_pos = lineup_pos +1
 	ret['lineup-pos'] = lineup_pos
 
-	(ret['first'], ret['last']) = parse_name(m.group(1).strip())
-
 	#print "BATTER: %s %s | %s" % (ret['first'], ret['last'], line)
 	
-	stats = m.group(3).split()
+	stats = right.split()
 	i = 0
 	for key in ['ab','r','h','rbi','bb','so','po','a']:
 		ret[key] = stats[i]
@@ -76,7 +82,7 @@ def read_extras(line):
 		ret['L'] = m3.group(2)
 		ret['S'] = m3.group(3)
 	else:
-		for m in re.finditer(r"(\S+) - ([^-].*)\.", line):
+		for m in re.finditer(r"(\S+) - ([^-]*)\.", line):
 			if m is not None:
 				key = m.group(1)
 				value = m.group(2)
@@ -143,7 +149,10 @@ def read_boxscore(lines):
 			try:
 				dt = datetime.datetime.strptime(date, '%b %d, %Y')
 			except ValueError:
-				dt = datetime.datetime.strptime(date, '%m/%d/%y')
+				try:
+					dt = datetime.datetime.strptime(date, '%m/%d/%y')
+				except ValueError:
+					dt = datetime.datetime.strptime(date, '%m-%d-%y')
 			ret['date'] = dt.strftime('%Y%m%d')
 			ret['site'] = {'name': site}
 			sites.add_record(ret['site'])
@@ -302,13 +311,13 @@ def construct_roster(year, team, game_id, batting, pitching, extras):
 
 			if player_id is not None:
 				#print " ++ (%s) EXTRA: %s = %s [%s] x%s" % (team, key, name, player_id, number)
-				if key in ['E','2B','3B','HR','SB','CS','SH','HBP']:
+				if key in ['E','PB','2B','3B','HR','SB','CS','SH','HBP']:
 					batters[player_id][key.lower()] = number
-				elif key in ['WP','P-HBP','W','L','S']:
+				elif key in ['WP','BK','P-HBP','W','L','S']:
 					if key == 'P-HBP': 
 						key = "hbp"
 					else:
-						key = key[:1].lower()
+						key = key.lower()
 					pitchers[player_id][key] = number
 
 	for id in ret:
