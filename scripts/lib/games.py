@@ -1,4 +1,4 @@
-import csv, os
+import csv, datetime, os
 from collections import OrderedDict
 from datetime import datetime
 
@@ -50,5 +50,15 @@ def has_id(id):
 
 def get_data():
 	return data;
+
+def parse_date(str):
+	try:
+		dt = datetime.strptime(str, '%b %d, %Y')
+	except ValueError:
+		try:
+			dt = datetime.strptime(str, '%m/%d/%y')
+		except ValueError:
+			dt = datetime.strptime(str, '%m-%d-%y')
+	return dt.strftime('%Y%m%d')
 
 read_data()

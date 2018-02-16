@@ -1,14 +1,20 @@
-import csv, datetime, os, re, sys
+import csv, os, re, sys
 from lib import games, linescores, sites, teams
 
 updated_games = set()
 
 def process_lines(date, site, lines, number):
+	
+	# 2001-2
+	#v_index = 2
+	#h_index = 3
+	# 2003
+	v_index = 1
+	h_index = 2
 
-	#print " ++ PROCESS LINES: %s | %s" %(lines[2][:27].strip(), lines[3][:27].strip())
-
-	v_name = re.sub('\.+$', '', lines[2][:27].strip())
-	h_name = re.sub('\.+$', '', lines[3][:27].strip())
+	print " ++ PROCESS LINES: %s | %s" %(lines[v_index][:27].strip(), lines[h_index][:27].strip())
+	v_name = re.sub('\.+$', '', lines[v_index][:27].strip())
+	h_name = re.sub('\.+$', '', lines[h_index][:27].strip())
 
 	v = teams.lookup_name({'name':v_name})
 	if v is None:
@@ -23,8 +29,12 @@ def process_lines(date, site, lines, number):
 	if h_id is None:
 		sys.exit("** no home ID found: ", h['name'])
 
-	m1 = re.search(r"([0-9 ]+) - +([0-9]+) +([0-9]+) +([0-9]+)", lines[2][20:])
-	m2 = re.search(r"([0-9 X\(\)]+) - +([0-9]+) +([0-9]+) +([0-9]+)", lines[3][20:])
+	m1 = re.search(r"([0-9 ]+) - +([0-9]+) +([0-9]+) +([0-9]+)", lines[v_index][20:])
+	m2 = re.search(r"([0-9 X\(\)]+) - +([0-9]+) +([0-9]+) +([0-9]+)", lines[h_index][20:])
+	if m1 is None:
+		sys.exit("ERROR: Unable to parse visitor linescore: ", lines[v_index][20:])
+	if m2 is None:
+		sys.exit("ERROR: Unable to parse home linescore: ", lines[h_index][20:])
 
 	ls = []
 	ls.append(linescores.construct_rec('V', 'team-id', v_id))
@@ -53,7 +63,12 @@ def process_lines(date, site, lines, number):
 	if games.has_id(game_id):
 		print " ** SKIPPING ", game_id
 		return
+	# 2002
 	if date in ['20020311','20020323','20020324','20020325','20020327','20020328']:
+		print " ** SKIPPING ", game_id
+		return
+	# 2003
+	if date in ['20030304','20030307','20030315','20030316','20030318','20030319','20030320','20030327','20030410','20030412','20030503'] or game_id in ['200304261concordia-m\'head']:
 		print " ** SKIPPING ", game_id
 		return
 
@@ -78,11 +93,7 @@ def main():
 			lines.append(line)
 			m = re.search(r"<br>\((.*) at (.*)\)<\/h3><\/a>", line)
 			if m is not None:
-				try :
-					dt = datetime.datetime.strptime(m.group(1), '%b %d, %Y')
-				except ValueError:
-					dt = datetime.datetime.strptime(m.group(1), '%m/%d/%y')
-				date = dt.strftime('%Y%m%d')
+				date = games.parse_date(m.group(1))
 
 				if prev_date is None or prev_date <> date:
 					number = 2
