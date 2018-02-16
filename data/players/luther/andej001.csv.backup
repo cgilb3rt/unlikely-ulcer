@@ -1,0 +1,3 @@
+player-id,game-id,lineup-pos,start,pos,ab,r,h,rbi,bb,so,2b,3b,hr,sb,cs,sh,sf,hbp,po,a,e,pb,p-ip,p-h,p-r,p-er,p-bb,p-so,p-ab,p-bf,p-wp,p-hbp,p-bk,p-w,p-l,p-s
+andej001,200303071macalester,9,True,lf,2,2,1,0,1,1,,,,1,,,,1,2,0,,,,,,,,,,,,,,,,
+andej001,200303072luther,8,True,lf,2,1,1,1,1,1,,1,,,,,,,2,0,,,,,,,,,,,,,,,,

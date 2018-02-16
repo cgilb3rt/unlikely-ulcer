@@ -1,4 +1,4 @@
-import argparse, csv, datetime, os, re, sys
+import argparse, csv, os, re, sys
 from collections import OrderedDict
 from lib import games, linescores, players, player_games, sites, teams
 
@@ -147,14 +147,7 @@ def read_boxscore(lines):
 			status = "date"
 		elif status == "date":
 			(date, site) = read_at(line)
-			try:
-				dt = datetime.datetime.strptime(date, '%b %d, %Y')
-			except ValueError:
-				try:
-					dt = datetime.datetime.strptime(date, '%m/%d/%y')
-				except ValueError:
-					dt = datetime.datetime.strptime(date, '%m-%d-%y')
-			ret['date'] = dt.strftime('%Y%m%d')
+			ret['date'] = games.parse_date(date)
 			ret['site'] = {'name': site}
 			sites.add_record(ret['site'])
 			status = "visitor"
