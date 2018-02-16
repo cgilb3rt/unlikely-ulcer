@@ -1,0 +1,11 @@
+homevisitor,stat,value
+V,team-id,st-catherine
+H,team-id,macalester
+V,R,5
+V,H,6
+V,E,3
+V,innings,"[""0"", ""2"", ""1"", ""1"", ""0"", ""1"", ""0""]"
+H,R,0
+H,H,4
+H,E,4
+H,innings,"[""0"", ""0"", ""0"", ""0"", ""0"", ""0"", ""0""]"

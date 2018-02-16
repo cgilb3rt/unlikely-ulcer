@@ -1,0 +1,11 @@
+homevisitor,stat,value
+V,team-id,macalester
+H,team-id,hu-piper
+V,R,0
+V,H,3
+V,E,1
+H,R,9
+H,H,13
+H,E,0
+V,innings,"[""0"", ""0"", ""0"", ""0"", ""0""]"
+H,innings,"[""2"", ""0"", ""1"", ""5"", ""1""]"

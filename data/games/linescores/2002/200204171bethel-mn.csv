@@ -1,0 +1,11 @@
+homevisitor,stat,value
+V,team-id,macalester
+H,team-id,bethel-mn
+V,R,1
+V,H,8
+V,E,2
+H,R,7
+H,H,15
+H,E,0
+V,innings,"[""0"", ""0"", ""1"", ""0"", ""0"", ""0"", ""0""]"
+H,innings,"[""1"", ""5"", ""0"", ""1"", ""0"", ""0""]"

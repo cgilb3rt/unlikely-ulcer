@@ -13,7 +13,7 @@ amherst,,Amherst,Amherst College
 anderson-in,,Anderson (IN),Anderson University (Ind.)
 anna-maria,,Anna Maria,Anna Maria College
 arcadia,,Arcadia,Arcadia University
-augsburg,MIAC,Augsburg,Augsburg University
+augsburg,MIAC,Augsburg,Augsburg University,Augsburg College
 augustana-il,,Augustana (IL),Augustana College (IL)
 aurora,,Aurora,Aurora University
 austin,,Austin,Austin College
@@ -30,7 +30,7 @@ benedictine-il,,Benedictine (IL),Benedictine University
 berry,,Berry,Berry College
 bethany-wv,,Bethany (WV),Bethany College
 bethany-lutheran,,Bethany Lutheran,Bethany Lutheran College
-bethel-mn,MIAC,Bethel,Bethel University,Bethel (MN)
+bethel-mn,MIAC,Bethel,Bethel University,Bethel (MN)|Bethel College
 birmingham-so,,Birmingham-So.,Birmingham-Southern College
 blackburn,,Blackburn,Blackburn
 bluffton,,Bluffton,Bluffton University
@@ -136,7 +136,7 @@ guilford,,Guilford,Guilford College
 gust-adolphus,MIAC,Gustavus Adolphus,Gustavus Adolphus College,Gust. Adolphus
 gwynedd-mercy,,Gwynedd Mercy,Gwynedd-Mercy College
 hamilton,,Hamilton,Hamilton College
-hamline,MIAC,Hamline,Hamline University
+hamline,MIAC,Hamline,Hamline University,HU Piper Fastpitch
 hanover,,Hanover,Hanover College
 hardin-simmons,,Hardin-Simmons,Hardin-Simmons University
 haverford,,Haverford,Haverford College
@@ -416,5 +416,4 @@ yeshiva,,Yeshiva,Yeshiva University
 york-ny,,York (NY),York College (N.Y.)
 york-pa,,York (PA),York College (Pa.)
 simon-fraser,,Simon Fraser,Simon Fraser
-hu-piper,,HU Piper Fastpitch,HU Piper Fastpitch
 dana,,Dana,Dana
