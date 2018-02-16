@@ -70,7 +70,7 @@ def parse_innings(input):
 		elif char != 'X':
 			innings.append(char)
 
-	print " ** parse_innings (%s) => %s" % (input, innings)
+	#print " ** parse_innings (%s) => %s" % (input, innings)
 	return innings
 
 def find_item(lines, homevisitor, stat):

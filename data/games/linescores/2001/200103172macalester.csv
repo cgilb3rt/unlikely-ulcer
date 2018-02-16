@@ -1,11 +1,11 @@
 homevisitor,stat,value
-V,team-id,la-verne
+V,team-id,colorado
 H,team-id,macalester
-V,R,17
-V,H,16
-V,E,2
-H,R,3
-H,H,5
-H,E,3
-V,innings,"[""2"", ""0"", ""5"", ""0"", ""1"", ""9"", ""0""]"
-H,innings,"[""0"", ""0"", ""2"", ""1"", ""0"", ""0""]"
+V,R,9
+V,H,9
+V,E,5
+H,R,6
+H,H,8
+H,E,11
+V,innings,"[""5"", ""0"", ""4"", ""0"", ""0"", ""0"", ""0""]"
+H,innings,"[""1"", ""1"", ""1"", ""0"", ""3"", ""0"", ""0""]"

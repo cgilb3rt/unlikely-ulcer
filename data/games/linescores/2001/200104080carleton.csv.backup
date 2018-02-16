@@ -1,0 +1,11 @@
+homevisitor,stat,value
+V,team-id,macalester
+H,team-id,carleton
+V,R,0
+V,H,3
+V,E,1
+V,innings,"[""0"", ""0"", ""0"", ""0"", ""0"", ""0"", ""0""]"
+H,R,6
+H,H,8
+H,E,0
+H,innings,"[""0"", ""1"", ""0"", ""0"", ""5"", ""0""]"

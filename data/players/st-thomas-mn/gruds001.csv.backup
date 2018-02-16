@@ -1,2 +1,3 @@
 player-id,game-id,lineup-pos,start,pos,ab,r,h,rbi,bb,so,2b,3b,hr,sb,cs,sh,sf,hbp,po,a,e,pb,p-ip,p-h,p-r,p-er,p-bb,p-so,p-ab,p-bf,p-wp,p-hbp,p-w,p-l,p-s
+gruds001,200104101macalester,2,True,2b,1,2,1,1,2,0,,,,3,,,,,1,1,,,,,,,,,,,,,,,
 gruds001,200104102macalester,2,True,2b,5,2,3,4,1,0,,,,,,,,,1,4,,,,,,,,,,,,,,,

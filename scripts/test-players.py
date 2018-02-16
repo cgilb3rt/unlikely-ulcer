@@ -19,6 +19,8 @@ print row
 print "Write-----------------"
 players.write_data()
 
+print "split_packed('2001|2002'): ", players.split_packed('2001|2001')
+print "split_packed('2001'): ", players.split_packed('2001')
 
 #print "Compute ID-----------------"
 #row={'id':'gilbc001','first':'Chris','last':'Gilbert','years':'2001,2002','team':None,'extra':None}

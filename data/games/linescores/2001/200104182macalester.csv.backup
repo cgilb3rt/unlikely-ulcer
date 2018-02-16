@@ -1,0 +1,11 @@
+homevisitor,stat,value
+V,team-id,concordia-m'head
+H,team-id,macalester
+V,R,7
+V,H,11
+V,E,1
+V,innings,"[""1"", ""0"", ""0"", ""1"", ""0"", ""2"", ""3""]"
+H,R,1
+H,H,4
+H,E,4
+H,innings,"[""0"", ""0"", ""0"", ""0"", ""0"", ""0"", ""1""]"

@@ -48,7 +48,7 @@ cal-baptist,,Cal Baptist,Cal Baptist University,Cal Baptist Univ
 cal-lutheran,,Cal Lutheran,California Lutheran
 calvin,,Calvin,Calvin College
 capital,,Capital,Capital University
-carleton,MIAC,Carleton,Carleton College
+carleton,MIAC,Carleton,Carleton College,Carleton College
 carroll-wi,,Carroll (WI),Carroll University
 carthage,,Carthage,Carthage College
 castleton,,Castleton,Castleton University
@@ -77,8 +77,8 @@ concorida-ca,,Concordia (CA),Concordia University Irvine,Concordia Univ. (CA)
 concordia-tx,,Concordia (TX),Concordia University Texas
 concordia-chicago,,Concordia Chicago,Concordia University Chicago
 concordia-wi,,Concordia Wisconsin,Concordia University Wisconsin
-concordia-m'head,MIAC,Concordia-Moorhead,Concordia College-Moorhead,Concordia-M'head
-cornell-college,,Cornell College,Cornell College
+concordia-m'head,MIAC,Concordia-Moorhead,Concordia College-Moorhead,"Concordia-M'head|Concordia"
+cornell-college,,Cornell College,Cornell College,Cornell (Ia.)
 covenant,,Covenant,Covenant College
 crown-mn,,Crown (MN),Crown College
 curry,,Curry,Curry College
@@ -232,7 +232,7 @@ muhlenberg,,Muhlenberg,Muhlenberg College
 muskingum,,Muskingum,Muskingum University
 nc-wesleyan,,N.C. Wesleyan,North Carolina Wesleyan College
 nazareth,,Nazareth,Nazareth College
-neb-wesleyan,,Neb. Wesleyan,Nebraska Wesleyan University
+neb-wesleyan,,Neb. Wesleyan,Nebraska Wesleyan University,Nebraska Wesleyan
 neumann,,Neumann,Neumann University
 new-england-col,,New England Col.,New England College
 new-jersey-city,,New Jersey City,New Jersey City University
@@ -243,7 +243,7 @@ north-central-il,,North Central (IL),North Central College
 north-central-mn,,North Central (MN),North Central University
 north-park,,North Park,North Park University
 northland,,Northland,Northland College
-northwestern-stpaul,,Northwestern-St.Paul,University of Northwestern-St. Paul,Northwestern
+northwestern-stpaul,,Northwestern-St.Paul,University of Northwestern-St. Paul,Northwestern|Northwestern (Minn.)
 norwich,,Norwich,Norwich University
 notre-dame-md,,Notre Dame (MD),Notre Dame of Maryland University
 new-york-u,,NYU,New York University
@@ -256,7 +256,7 @@ olivet,,Olivet,Olivet College
 oswego-st,,Oswego St.,"SUNY, Oswego"
 otterbein,,Otterbein,Otterbein University
 ozarks-ar,,Ozarks (AR),University of the Ozarks
-pacific-or,,Pacific (OR),Pacific University
+pacific-or,,Pacific (OR),Pacific University,Pacific (Ore.)
 pacific-lutheran,,Pacific Lutheran,Pacific Lutheran University
 penn-college,,Penn College,University of Pennsylvania
 penn-st-harrisburg,,Penn St. Harrisburg,Penn State Harrisburg
@@ -295,7 +295,7 @@ rowan,,Rowan,Rowan University
 rutgers-camden,,Rutgers-Camden,"Rutgers University, Camden"
 rutgers-newark,,Rutgers-Newark,"Rutgers University, Newark"
 sage-colleges,,Sage Colleges,The Sage Colleges
-st-benedict,MIAC,Saint Benedict,College of Saint Benedict,St. Benedict
+st-benedict,MIAC,Saint Benedict,College of Saint Benedict,St. Benedict|St. Bens Blazers
 saint-marys-mn,MIAC,Saint Mary's,Saint Mary's University (Minn.),Saint Mary's (MN)
 saint-vincent,,Saint Vincent,Saint Vincent College
 salem,,Salem (NC),Salem College
@@ -402,7 +402,7 @@ wis-eau-claire,,Wis.-Eau Claire,University of Wisconsin-Eau Claire
 wis-la-crosse,,Wis.-La Crosse,University of Wisconsin-La Crosse
 wis-oshkosh,,Wis.-Oshkosh,University of Wisconsin-Oshkosh
 wis-platteville,,Wis.-Platteville,University of Wisconsin-Platteville
-wis-river-falls,,Wis.-River Falls,University of Wisconsin-River Falls
+wis-river-falls,,Wis.-River Falls,University of Wisconsin-River Falls,UW-River Falls
 wis-stevens-point,,Wis.-Stevens Point,Univ. of Wisconsin-Stevens Point
 wis-stout,,Wis.-Stout,University of Wisconsin-Stout
 wis-superior,,Wis.-Superior,University of Wisconsin-Superior
@@ -415,3 +415,6 @@ wpi,,WPI,Worcester Polytechnic Institute
 yeshiva,,Yeshiva,Yeshiva University
 york-ny,,York (NY),York College (N.Y.)
 york-pa,,York (PA),York College (Pa.)
+simon-fraser,,Simon Fraser,Simon Fraser
+hu-piper,,HU Piper Fastpitch,HU Piper Fastpitch
+dana,,Dana,Dana

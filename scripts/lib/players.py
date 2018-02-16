@@ -93,8 +93,11 @@ def lookup_name(row):
 		rec = data['id-lookup'][id]
 		if 'years' in row and row['years'] is not None and row['years'] != rec['years']:
 			years = split_packed(rec['years'])
-			years.extend(split_packed(row['years']))
-			data['id-lookup'][id]['years'] = join_packed(years.sort())
+			for yr in split_packed(row['years']):
+				if yr not in years:
+					years.append(yr)
+			years.sort()
+			data['id-lookup'][id]['years'] = join_packed(years)
 	else:
 		id = compute_id(row)
 		row['id'] = id

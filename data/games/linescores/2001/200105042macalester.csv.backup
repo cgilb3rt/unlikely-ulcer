@@ -1,0 +1,11 @@
+homevisitor,stat,value
+V,team-id,gust-adolphus
+H,team-id,macalester
+V,R,8
+V,H,11
+V,E,0
+V,innings,"[""2"", ""0"", ""0"", ""4"", ""0"", ""1"", ""1""]"
+H,R,0
+H,H,3
+H,E,6
+H,innings,"[""0"", ""0"", ""0"", ""0"", ""0"", ""0"", ""0""]"

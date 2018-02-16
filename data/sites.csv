@@ -1,7 +1,11 @@
 id,name,extra
+NORTH001,"Northfield, MN (Bell Field Stadium)",
 ARDEN001,"Arden Hills, Minn. (Bethel College)","Arden Hills, Minn."
 MINNE001,"Minneapolis, Minn. (Anderson-Nelson)",
-STJOS001,"St. Joseph, Minn. (St. Benedict)","St. Joseph, Minn."
-PLYMO001,"Plymouth, Minn. (Plymouth Fieldhouse)","Plymouth (Plymouth Field House)|Plymouth, Minn.|Plymouth"
+ORANG001,"Orange, CA",
+STJOS001,"St. Joseph, Minn. (St. Benedict)","St. Joseph, Minn.|St. Joseph (St. Bens)"
+PLYMO001,"Plymouth, Minn. (Plymouth Fieldhouse)","Plymouth (Plymouth Field House)|Plymouth, Minn.|Plymouth|Plymouth, Minn. (Plymouth Dome)|Plymouth, Minn. (Plymouth Creek Dome)|Plymouth, Minn. (Plymouth Come)"
+TUCSO001,"Tucson, Ariz.",
 WINON001,Winona Minn. (SMU Field),"Winona, Minn. (SMU Field)"
+STPAU002,"St. Paul, Minn. (St. Catherine)",
 STPAU001,"St. Paul, Minn. (Shaw Field)","St. Paul, Minn."

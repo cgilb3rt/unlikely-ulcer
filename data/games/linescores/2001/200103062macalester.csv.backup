@@ -1,0 +1,11 @@
+homevisitor,stat,value
+V,team-id,northwestern-stpaul
+H,team-id,macalester
+V,R,5
+V,H,5
+V,E,3
+V,innings,"[""0"", ""0"", ""1"", ""1"", ""3""]"
+H,R,5
+H,H,8
+H,E,3
+H,innings,"[""0"", ""0"", ""0"", ""2"", ""3""]"

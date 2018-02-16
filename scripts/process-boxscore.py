@@ -9,6 +9,7 @@ def read_args():
 	parser = argparse.ArgumentParser()
 	parser.add_argument('year')
 	parser.add_argument('files', nargs='+')
+	parser.add_argument('--silent', action='store_true')
 	return parser.parse_args()
 
 def read_at(line):
@@ -21,16 +22,21 @@ def read_score(line):
 	return line.strip().split(' ')[1]
 
 def read_batter(line, lineup_pos):
-	m = re.search('([\w\'\. ]+) ([a-z1-9/]+)\.+ ([0-9 ]+)', line)
+	m = re.search('([\w\'\.\* ]+) ([a-z1-9/]+)\.+ ([0-9 ]+)', line)
 	if m is None:
-		sys.exit(" -- UNABLE TO PARSE : %s" % line)
+		# handle the case where there is no '.' after positions
+		m = re.search('([\w\'\.\* ]+) ([a-z1-9/]+) ([0-9 ]+)', line)
+		if m is None:
+			sys.exit(" -- UNABLE TO PARSE : %s" % line)
 	ret = {"start": (line[0] != ' '), "pos": m.group(2)}
 
 	if ret['start']:
 		lineup_pos = lineup_pos +1
 	ret['lineup-pos'] = lineup_pos
 
-	(ret['first'], ret['last']) = parse_name(m.group(1))
+	(ret['first'], ret['last']) = parse_name(m.group(1).strip())
+
+	#print "BATTER: %s %s | %s" % (ret['first'], ret['last'], line)
 	
 	stats = m.group(3).split()
 	i = 0
@@ -41,19 +47,24 @@ def read_batter(line, lineup_pos):
 	return ret
 
 def read_pitcher(line, order):
-	m = re.search('([\w\' ]+)\.+ ([0-9\. ]+)', line)
-	if m is None:
-		sys.exit(" -- UNABLE TO PARSE : %s" % line)
+	#m = re.search('([\w\'\.\* ]+)\.+ ([0-9\. ]+)', line[)
+	#if m is None:
+	#	sys.exit(" -- UNABLE TO PARSE : %s" % line)
 	ret = {"start": (order == 0)}
 
-	(ret['first'], ret['last']) = parse_name(m.group(1))
+	(ret['first'], ret['last']) = parse_name(line[:20])
+	# strip off trailing dots
+	ret['last'] = re.sub(r"\.+$", "", ret['last'])
 
-	stats = m.group(2).split()
+	#print "PITCHER: %s %s | %s" % (ret['first'], ret['last'], line)
+
+	stats = line[20:].split()
 	i = 0
 	#print " ++ read_pitcher: %s | %s" % (stats, line)
 	for key in ['ip','h','r','er','bb','so','ab','bf']:
-		ret[key] = stats[i]
-		i = i+1
+		if len(stats) > i:
+			ret[key] = stats[i]
+			i = i+1
 		
 	return ret
 
@@ -86,7 +97,12 @@ def parse_name(name):
 		parts = name.split(' ')
 		return (parts[0], parts[1])
 	else:
-		return (None, name)
+		# try to identify first initial 'R.Zahn'
+		m = re.search(r"([A-Z])\.(.*)", name)
+		if m is not None:
+			return (m.group(1), m.group(2))
+		else:
+			return (None, name)
 	
 def read_boxscore(lines):
 	m1 = re.compile(r"<h3>Box Score<\/h3>")
@@ -124,7 +140,11 @@ def read_boxscore(lines):
 			status = "date"
 		elif status == "date":
 			(date, site) = read_at(line)
-			ret['date'] = datetime.datetime.strptime(date, '%b %d, %Y').strftime('%Y%m%d')
+			try:
+				dt = datetime.datetime.strptime(date, '%b %d, %Y')
+			except ValueError:
+				dt = datetime.datetime.strptime(date, '%m/%d/%y')
+			ret['date'] = dt.strftime('%Y%m%d')
 			ret['site'] = {'name': site}
 			sites.add_record(ret['site'])
 			status = "visitor"
@@ -253,12 +273,13 @@ def construct_roster(year, team, game_id, batting, pitching, extras):
 		batters[id] = batter
 	for pitcher in pitching:
 		rec = players.create_rec(pitcher['first'], pitcher['last'], year, team)
+		#print " ++ pitcher : ", rec
 		players.add_record(rec)
 		id = rec['id']
 		if id not in ret:
 			ret.append(id)
 		pitchers[id] = pitcher
-
+		
 	for key in extras.keys():
 		for entry in extras[key].split(","):
 			number = 1
@@ -331,6 +352,8 @@ def construct_linescore(game_id, boxscore):
 	linescores.add_records(game_id, ls)
 	updated_games.add(game_id)
 
+	return ls
+
 def add_player(first, last, team, year):
 	rec = {'last': last, 'first': first, 'team': team, 'years': year, 'extra': None}
 	rec['id'] = players.compute_id(rec)
@@ -348,6 +371,12 @@ def main():
 			boxscore = read_boxscore([line.strip('\n') for line in f])
 			game = construct_game(boxscore, args.year)
 			print "...processed as id: ", game['info']['id']
+
+	if args.silent:
+		print " ** SILENT MODE **"
+		for key in game:
+			print "%s | %s" % (key, game[key])
+		return
 
 	games.write_data()
 	sites.write_data()

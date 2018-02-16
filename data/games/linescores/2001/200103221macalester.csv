@@ -1,11 +1,11 @@
 homevisitor,stat,value
-V,team-id,cal-baptist
+V,team-id,concorida-ca
 H,team-id,macalester
-V,R,18
-V,H,18
-V,E,5
-H,R,12
-H,H,13
-H,E,3
-V,innings,"[""1"", ""4"", ""8"", ""0"", ""0"", ""3"", ""2""]"
-H,innings,"[""4"", ""0"", ""6"", ""2"", ""0"", ""0"", ""0""]"
+V,R,10
+V,H,13
+V,E,1
+H,R,0
+H,H,2
+H,E,2
+V,innings,"[""4"", ""3"", ""2"", ""1"", ""0""]"
+H,innings,"[""0"", ""0"", ""0"", ""0"", ""0""]"

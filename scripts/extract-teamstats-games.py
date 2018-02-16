@@ -58,18 +58,19 @@ def main():
 			lines.append(line)
 			m = re.search(r"<br>\((.*) at (.*)\)<\/h3><\/a>", line)
 			if m is not None:
+				date = datetime.datetime.strptime(m.group(1), '%b %d, %Y').strftime('%Y%m%d')
+				site = {'name': m.group(2)}
+				sites.add_record(site)
+
 				if prev_date is None or prev_date <> date:
 					number = 2
 				else:
 					number = 1
-				if date is not None and site['id'] == 'ORANG001':
-						process_lines(date, site, lines, number)
-						prev_date = date
+				if prev_date is not None and site['id'] == 'ORANG001':
+					process_lines(date, site, lines, number)
+				prev_date = date
 				lines = []
-				date = datetime.datetime.strptime(m.group(1), '%b %d, %Y').strftime('%Y%m%d')
-				site = {'name': m.group(2)}
-				sites.add_record(site)
-	if date is not None and site['id'] == 'ORANG001':
+	if site['id'] == 'ORANG001':
 		process_lines(date, site, lines, number)
 
 	games.write_data()
